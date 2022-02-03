@@ -1,0 +1,129 @@
+.card {
+  // For larger screen sizes
+  // width: calc(50% - 0.5rem);
+  // height: calc(50vw - 3.5rem);
+  // max-height: 26rem;
+  // max-width: 26rem;
+  // display: inline-block;
+  perspective: 150rem;
+  width: 30rem;
+  height: 18vh;
+  // position: relative;
+  // background-color: $color-white;
+  // box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+  //   rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  // border-radius: 3px;
+  z-index: 0;
+  // transition-delay: 1s;
+  // flex direction row reverse to select sibling elements and set height to 0
+  margin: 0.6rem;
+  &__text {
+    width: 100%;
+    text-align: center;
+    @include absolute-center;
+    &--lower {
+      border-top: solid $color-grey-dark 1px;
+      padding-top: 1.2rem;
+    }
+    &--github {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+    &--inner {
+      margin: 0.5rem;
+    }
+  }
+
+  &__side {
+    // background-color: orangered;
+    font-size: 2rem;
+    width: 100%;
+    height: 18vh;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+      rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: left;
+
+    &-description {
+      text-align: center;
+      font-size: 2rem;
+      display: block;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      &--small {
+        font-size: 1.7rem;
+      }
+      &--xsmall {
+        font-size: 1.7rem;
+      }
+    }
+
+    &--front {
+      background-color: $color-white;
+
+      &-CSArt {
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 300;
+        font-size: 2.5rem;
+      }
+
+      &-Github {
+        background-color: #24292f;
+        color: rgb(255, 255, 233);
+        // font-family: "Zilla Slab", serif;
+        font-weight: 400;
+        font-size: 2.5rem;
+      }
+      &-Portfolio {
+        line-height: 2.5;
+      }
+    }
+    &--back {
+      transform: rotateY(180deg);
+      background-color: $color-white;
+      font-size: 1.4rem;
+      // line-height: 3rem;
+      padding: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: $color-grey-dark-3;
+      // z-index: 0;
+    }
+  }
+  &:hover {
+    z-index: 555555 !important;
+    transition-delay: 0s;
+  }
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+    // z-index: 555555 !important;
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+    height: 80vh;
+    width: 80vw;
+    // transform: translateY(-20rem);
+    // z-index: 555555 !important;
+  }
+
+  &__logo {
+    height: 60%;
+    @include absolute-center;
+  }
+  &__img {
+    max-height: 80%;
+    object-fit: contain;
+  }
+}

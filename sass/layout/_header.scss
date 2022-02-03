@@ -1,0 +1,47 @@
+.header {
+  top: 0;
+  background-color: $color-white;
+  height: 100vh; // overflow-x: hidden;
+  // overflow-y: auto;
+  line-height: 3;
+  @include flex-center;
+  scroll-snap-align: start;
+  &__heading {
+    line-height: 2;
+    font-weight: 700;
+    font-size: 4rem;
+    letter-spacing: 1px;
+  }
+
+  &__text {
+    font-size: 2rem;
+    margin-bottom: 0 !important;
+    animation: moveInBottom 2s ease-out;
+  }
+  &__text-box {
+    padding: 0 3rem;
+  }
+
+  &__img {
+    height: 20rem;
+    width: 20rem;
+  }
+}
+
+.aside {
+  width: 6rem;
+  white-space: nowrap;
+
+  font-size: 1.2rem;
+
+  &--left {
+    transform: rotate(-90deg);
+    transform-origin: -5px 0;
+    align-self: flex-end;
+  }
+  &--right {
+    transform: rotate(90deg);
+    transform-origin: 60px 0;
+    align-self: flex-start;
+  }
+}

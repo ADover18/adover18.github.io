@@ -1,0 +1,61 @@
+.collapsible {
+  &__checkbox {
+    display: none;
+  }
+  &__checkbox:checked ~ &__section {
+    max-height: 30rem;
+  }
+  &__checkbox:checked ~ &__section &__icon,
+  &__checkbox:checked ~ &__section &__icon:after {
+    transform: rotate(180deg);
+  }
+  &__checkbox:checked ~ &__section &__content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &__section {
+    transition: all 0.5s ease-in-out;
+    // animation-timing-function: linear;
+    transform-style: preserve-3d;
+    display: block;
+    max-height: 6rem;
+    padding: 10px 15px;
+    overflow: hidden;
+    cursor: pointer;
+    background: $color-white;
+    position: relative;
+    border-bottom: 3px solid $color-grey-dark;
+  }
+  &__header {
+    background-color: $color-white;
+    font-weight: 300;
+  }
+  &__icon {
+    top: 2.7rem;
+    right: 1rem;
+    &,
+    &::after {
+      width: 1.7rem;
+      height: 1.8px;
+      background-color: $color-grey-dark;
+      display: block;
+      position: absolute;
+      transition: all 0.5s ease-in-out;
+    }
+    &::after {
+      content: "";
+      transform: rotate(90deg);
+    }
+  }
+  &__content {
+    margin-top: 1rem;
+    transition: all 0.5s ease-in-out;
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(-5rem);
+    z-index: -1;
+    color: $color-grey-dark-3;
+    line-height: 3rem;
+    font-weight: 400;
+  }
+}

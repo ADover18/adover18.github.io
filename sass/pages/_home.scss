@@ -1,0 +1,53 @@
+// section:target::before {
+//   content: "";
+//   display: block;
+//   height: 120px; /* fixed header height*/
+//   margin: -120px 0 0; /* negative fixed header height */
+// }
+
+// .aboutme::before {
+//   content: "";
+//   display: block;
+//   height: 1500px; /* fixed header height*/
+//   margin: -1500px 0 0; /* negative fixed header height */
+// }
+// body {
+//   background-color: $color-dark-blue-1;
+// }
+
+// .title {
+//   font-family: "Rubik", sans-serif;
+//   color: #fff;
+//   font-size: 6rem;
+//   font-weight: 500;
+//   width: 100vw;
+//   text-align: center;
+//   z-index: 1000;
+//   text-shadow: 0 0 6rem #fff, 0 0 10rem #f0f, 0 0 14rem #0ff;
+//   margin-top: 1rem;
+//   position: relative;
+// }
+
+// .glow-1 {
+//   width: 50rem;
+//   height: 50rem;
+//   // border-radius: 50%;
+//   background-color: $color-yellow-8;
+//   color: $color-dark-blue-1;
+//   box-shadow: 0 0 6rem 3rem #fff, 0 0 10rem 6rem #f0f, 0 0 14rem 9rem #0ff;
+//   position: absolute;
+//   top: 20rem;
+//   left: 5rem;
+//   font-size: $default-font-size;
+//   padding: 1.4rem 2rem;
+//   z-index: 0;
+// }
+
+// .title__icon {
+//   font-size: 5rem;
+
+//   &:hover {
+//     transform: rotate(359deg);
+//     transition: all 10s;
+//   }
+// }
