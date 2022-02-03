@@ -24,3 +24,12 @@ a {
 section {
   position: relative;
 }
+
+.pdf {
+  max-width: 80vw;
+  max-height: 80vh;
+  @include absolute-center;
+  &__frame {
+    border-bottom: 4px solid #323639;
+  }
+}
