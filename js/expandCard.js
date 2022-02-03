@@ -16,14 +16,18 @@ let cardPos;
 });
 
 cardList.forEach((card, i) => {
-  card.addEventListener("mouseenter", function (event) {
-    card.querySelector(
-      ".card__side--back"
-    ).style.transform = `translate(${cardPos[i][0]}px, ${cardPos[i][1]}px)`;
+  ["mouseenter", "touchstart"].forEach((event) => {
+    card.addEventListener(event, function (e) {
+      card.querySelector(
+        ".card__side--back"
+      ).style.transform = `translate(${cardPos[i][0]}px, ${cardPos[i][1]}px)`;
+    });
   });
-  card.addEventListener("mouseleave", function (event) {
-    card.querySelector(
-      ".card__side--back"
-    ).style.transform = `rotateY(-180deg) translateY(0)`;
+  ["mouseleave", "touchend"].forEach((event) => {
+    card.addEventListener(event, function (e) {
+      card.querySelector(
+        ".card__side--back"
+      ).style.transform = `rotateY(-180deg) translateY(0)`;
+    });
   });
 });
