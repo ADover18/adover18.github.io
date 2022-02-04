@@ -19,6 +19,12 @@
     font-weight: 300;
     color: $color-grey-dark;
   }
+  input {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
   &__input {
     width: 100%;
     border: 1px solid $color-grey-light-2;
@@ -26,10 +32,6 @@
     font-family: "Lato";
     input {
       height: 3.5rem;
-      border-radius: 0;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
     }
     &:focus {
       outline: none;

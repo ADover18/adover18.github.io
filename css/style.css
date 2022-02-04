@@ -308,17 +308,18 @@ h5 {
     text-transform: uppercase;
     font-weight: 300;
     color: #777; }
+  .form input {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
   .form__input {
     width: 100%;
     border: 1px solid #eee;
     padding: 1rem;
     font-family: "Lato"; }
     .form__input input {
-      height: 3.5rem;
-      border-radius: 0;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none; }
+      height: 3.5rem; }
     .form__input:focus {
       outline: none; }
       .form__input:focus:valid {
