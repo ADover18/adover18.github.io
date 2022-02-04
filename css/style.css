@@ -201,6 +201,7 @@ h5 {
       .card__side--front-Portfolio {
         line-height: 2.5; }
     .card__side--back {
+      -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg);
       background-color: #fff;
       font-size: 1.4rem;
@@ -226,8 +227,10 @@ h5 {
     z-index: 555555 !important;
     transition-delay: 0s; }
   .flipcard-checkbox:checked + .card .card__side--front {
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg); }
   .flipcard-checkbox:checked + .card .card__side--back {
+    -webkit-transform: rotateY(0);
     transform: rotateY(0);
     height: 80vh;
     width: 80vw; }
