@@ -2,6 +2,7 @@
   width: 100%;
   text-align: center;
   margin-top: 0;
+  // Fix transition when nav put in place
   transition: all 1s ease-in-out;
 
   &--expanded {
