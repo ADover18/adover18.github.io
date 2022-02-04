@@ -6,8 +6,9 @@
   // max-width: 26rem;
   // display: inline-block;
   perspective: 150rem;
-  width: 30rem;
+  width: 80vw;
   height: 18vh;
+
   // position: relative;
   // background-color: $color-white;
   // box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
@@ -101,22 +102,19 @@
       // z-index: 0;
     }
   }
-  &:hover {
-    z-index: 555555 !important;
-    transition-delay: 0s;
-  }
-  &:hover &__side--front {
-    transform: rotateY(-180deg);
-    // z-index: 555555 !important;
-  }
+  // &:hover {
+  //   z-index: 555555 !important;
+  //   transition-delay: 0s;
+  // }
+  // &:hover &__side--front {
+  //   transform: rotateY(-180deg);
+  // }
 
-  &:hover &__side--back {
-    transform: rotateY(0);
-    height: 80vh;
-    width: 80vw;
-    // transform: translateY(-20rem);
-    // z-index: 555555 !important;
-  }
+  // &:hover &__side--back {
+  //   transform: rotateY(0);
+  //   height: 80vh;
+  //   width: 80vw;
+  // }
 
   &__logo {
     height: 60%;
@@ -125,5 +123,21 @@
   &__img {
     max-height: 80%;
     object-fit: contain;
+  }
+}
+
+.flipcard-checkbox {
+  display: none;
+  &:checked + .card {
+    z-index: 555555 !important;
+    transition-delay: 0s;
+  }
+  &:checked + .card .card__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:checked + .card .card__side--back {
+    transform: rotateY(0);
+    height: 80vh;
+    width: 80vw;
   }
 }

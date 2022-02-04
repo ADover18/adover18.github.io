@@ -7,7 +7,7 @@ const cardBack = document.querySelectorAll(".card__side--back");
 let cardPos;
 
 ["resize", "load"].forEach((event) => {
-  window.addEventListener(event, function () {
+  window.addEventListener(event, function (e) {
     cardPos = [...cardBack].map((card) => [
       cardBack[0].getBoundingClientRect().x - card.getBoundingClientRect().x,
       cardBack[0].getBoundingClientRect().y - card.getBoundingClientRect().y,
@@ -15,19 +15,48 @@ let cardPos;
   });
 });
 
+// cardList.forEach((card, i) => {
+//   console.log(card.previousElementSibling);
+//   if (
+//     "ontouchStart" in window ||
+//     navigator.maxTouchPoints > 0 ||
+//     navigator.msMaxTouchPoints > 0
+//   ) {
+//     if (card.previousElementSibling.checked == true) {
+//       card.querySelector(
+//         ".card__side--back"
+//       ).style.transform = `translate(${cardPos[i][0]}px, ${cardPos[i][1]}px)`;
+//     }
+//     if (card.previousElementSibling.checked == false) {
+//       card.querySelector(
+//         ".card__side--back"
+//       ).style.transform = `rotateY(-180deg) translate(0,0)`;
+//     }
+//   } else {
+//     card.addEventListener("mouseenter", function (e) {
+//       card.querySelector(
+//         ".card__side--back"
+//       ).style.transform = `translate(${cardPos[i][0]}px, ${cardPos[i][1]}px)`;
+//     });
+//     card.addEventListener("mouseleave", function (e) {
+//       card.querySelector(
+//         ".card__side--back"
+//       ).style.transform = `rotateY(-180deg) translate(0,0)`;
+//     });
+//   }
+// });
+
 cardList.forEach((card, i) => {
-  ["mouseenter", "touchstart"].forEach((event) => {
-    card.addEventListener(event, function (e) {
+  card.previousElementSibling.addEventListener("change", function (e) {
+    if (card.previousElementSibling.checked == true) {
       card.querySelector(
         ".card__side--back"
       ).style.transform = `translate(${cardPos[i][0]}px, ${cardPos[i][1]}px)`;
-    });
-  });
-  ["mouseleave", "touchend"].forEach((event) => {
-    card.addEventListener(event, function (e) {
+    }
+    if (card.previousElementSibling.checked == false) {
       card.querySelector(
         ".card__side--back"
-      ).style.transform = `rotateY(-180deg) translateY(0)`;
-    });
+      ).style.transform = `rotateY(-180deg) translate(0,0)`;
+    }
   });
 });
