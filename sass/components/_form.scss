@@ -20,12 +20,12 @@
     color: $color-grey-dark;
   }
   input {
-    border-radius: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
   }
   &__input {
+    border-radius: 0 !important;
     width: 100%;
     border: 1px solid $color-grey-light-2;
     padding: 1rem;
