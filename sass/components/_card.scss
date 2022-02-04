@@ -43,8 +43,9 @@
     font-size: 2rem;
     width: 100%;
     height: 18vh;
-    -webkit-transition: all 0.8s ease;
-    transition: all 0.8s ease;
+    -webkit-transition: transform 0.8s ease, height 0.8s ease;
+    transition: transform 0.8s ease, height 0.8s ease;
+
     position: absolute;
     top: 0;
     left: 0;
