@@ -229,7 +229,7 @@ h5 {
     transform: rotateY(-180deg); }
   .flipcard-checkbox:checked + .card .card__side--back {
     transform: rotateY(0);
-    height: 80vh;
+    height: calc(72vh + 3.6rem);
     width: 80vw; }
 
 .collapsible__checkbox {
