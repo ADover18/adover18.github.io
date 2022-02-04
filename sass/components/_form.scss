@@ -26,6 +26,10 @@
     font-family: "Lato";
     input {
       height: 3.5rem;
+      border-radius: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
     }
     &:focus {
       outline: none;
@@ -38,7 +42,5 @@
         outline: 2px solid $color-danger;
       }
     }
-  }
-  &__btn {
   }
 }

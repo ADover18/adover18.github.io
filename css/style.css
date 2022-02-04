@@ -44,7 +44,7 @@ section {
     border-bottom: 4px solid #323639; }
 
 fieldset {
-  border-width: 0; }
+  border-width: 0 !important; }
 
 body {
   font-family: "Lato", sans-serif;
@@ -314,7 +314,11 @@ h5 {
     padding: 1rem;
     font-family: "Lato"; }
     .form__input input {
-      height: 3.5rem; }
+      height: 3.5rem;
+      border-radius: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none; }
     .form__input:focus {
       outline: none; }
       .form__input:focus:valid {
