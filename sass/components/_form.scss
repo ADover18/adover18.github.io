@@ -1,0 +1,44 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__group {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+    &:last-child {
+      margin-bottom: 3rem;
+    }
+    &:first-child {
+      margin-top: 0.5rem;
+    }
+  }
+  &__label {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: $color-grey-dark;
+  }
+  &__input {
+    width: 100%;
+    border: 1px solid $color-grey-light-2;
+    padding: 1rem;
+    font-family: "Lato";
+    input {
+      height: 3.5rem;
+    }
+    &:focus {
+      outline: none;
+      // box-shadow: $box-shadow-form-input;
+      // border-bottom: 3px solid $color-primary;
+      &:valid {
+        border: 2px solid $color-success;
+      }
+      &:invalid {
+        outline: 2px solid $color-danger;
+      }
+    }
+  }
+  &__btn {
+  }
+}

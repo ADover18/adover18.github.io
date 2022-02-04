@@ -12,6 +12,9 @@ body {
   text-transform: uppercase;
   letter-spacing: 3px;
   display: block;
+  &--centered {
+    text-align: center;
+  }
 }
 
 h1,

@@ -43,6 +43,9 @@ section {
   .pdf__frame {
     border-bottom: 4px solid #323639; }
 
+fieldset {
+  border-width: 0; }
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -56,6 +59,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 3px;
   display: block; }
+  .heading-primary--centered {
+    text-align: center; }
 
 h1,
 h2,
@@ -286,6 +291,36 @@ h5 {
   color: #333;
   line-height: 3rem;
   font-weight: 400; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .form__group {
+    display: block; }
+    .form__group:not(:last-child) {
+      margin-bottom: 2.5rem; }
+    .form__group:last-child {
+      margin-bottom: 3rem; }
+    .form__group:first-child {
+      margin-top: 0.5rem; }
+  .form__label {
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #777; }
+  .form__input {
+    width: 100%;
+    border: 1px solid #eee;
+    padding: 1rem;
+    font-family: "Lato"; }
+    .form__input input {
+      height: 3.5rem; }
+    .form__input:focus {
+      outline: none; }
+      .form__input:focus:valid {
+        border: 2px solid #5cb85c; }
+      .form__input:focus:invalid {
+        outline: 2px solid #c32430; }
 
 .logo--github {
   color: #fff;
