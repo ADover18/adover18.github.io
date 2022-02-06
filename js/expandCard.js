@@ -1,17 +1,8 @@
-"use strict";
-
 const cardList = document.querySelectorAll(".card");
 
 const cardBack = document.querySelectorAll(".card__side--back");
 
 let cardPos;
-
-["resize", "load"].forEach((event) => {
-  window.addEventListener(event, function (e) {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vvh", `${vh}px`);
-  });
-});
 
 ["resize", "load"].forEach((event) => {
   window.addEventListener(event, function (e) {

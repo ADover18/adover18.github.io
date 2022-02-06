@@ -8,3 +8,73 @@
     transform: translate(0);
   }
 }
+
+@keyframes slideTopHeading {
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(
+      var(--heading1-x-movement),
+      var(--heading1-y-movement)
+    );
+  }
+}
+
+@keyframes slideBottomHeading {
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(
+      var(--heading2-x-movement),
+      var(--heading2-y-movement)
+    );
+  }
+}
+
+@keyframes fadeOut {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slideTopInfo {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(
+      var(--heading1-x-movement),
+      var(--heading1-y-movement)
+    );
+  }
+}
+
+@keyframes slideBottomInfo {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(
+      var(--heading2-x-movement),
+      var(--heading2-y-movement)
+    );
+  }
+}
+
+@keyframes drawSVGPath {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

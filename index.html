@@ -23,7 +23,9 @@
 
     <link rel="stylesheet" href="css/icon-font.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script defer src="js/expandCard.js"></script>
+    <script type="module" defer src="js/expandCard.js"></script>
+    <script type="module" defer src="js/setViewportUnits.js"></script>
+    <script type="module" defer src="js/animateHero.js"></script>
     <title>Alex Dover | Web Developer</title>
   </head>
   <body>
@@ -43,13 +45,21 @@
     <div class="parallax-wrapper">
       <header class="header" id="header">
         <div class="header__text-box">
-          <p class="header__text u-margin-bottom-small">
-            Hi my name is&nbsp; &nbsp;
-            <span class="header__heading"> Alex&nbsp;Dover.</span><br />
-            I am a full stack self taught&nbsp;&nbsp;
-            <span class="header__heading">Web&nbsp;Developer&nbsp;&nbsp;</span
-            >&nbsp; &nbsp;based in Edinburgh.
+          <p class="header__text">
+            <span class="header__info">Hi,
+              &nbsp;&nbsp;my name is&nbsp; &nbsp;</span>
+            <span class="header__heading"> Alex&nbsp;Dover.</span>
           </p>
+          <svg class="header__divider" height="5" width="500" stroke="#777" stroke-width="5" >
+            <line x1="0" y1="0" x2="500" y2="0">
+          </svg>
+          <p class="header__text">
+            <span class="header__info">I am a full-stack, self taught&nbsp;&nbsp;</span>
+            <span class="header__heading">Web&nbsp;Developer</span><br />
+            <span class="header__info">based in Edinburgh.</span>
+            
+          </p>
+          
         </div>
       </header>
       <section class="aboutme" id="aboutme">
