@@ -8,6 +8,7 @@
   perspective: 150rem;
   width: 80vw;
   height: 18vh;
+  height: calc(var(--vvh, 1vh) * 18);
 
   // position: relative;
   // background-color: $color-white;
@@ -43,6 +44,7 @@
     font-size: 2rem;
     width: 100%;
     height: 18vh;
+    height: calc(var(--vvh, 1vh) * 18);
     transition: transform 0.8s ease, height 0.8s ease;
 
     position: absolute;
@@ -116,6 +118,7 @@
     &:hover &__side--back {
       transform: rotateY(0);
       height: calc(72vh + 3.6rem);
+      height: calc(var(--vvh, 1vh) * 72 + 3.6rem);
       width: 80vw;
     }
     &:not(:hover) &__side--back {
@@ -147,6 +150,7 @@
     &:checked + .card .card__side--back {
       transform: rotateY(0);
       height: calc(72vh + 3.6rem);
+      height: calc(var(--vvh, 1vh) * 72 + 3.6rem);
       width: 80vw;
     }
     &:not(:checked) + .card .card__side--back {

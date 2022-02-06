@@ -28,6 +28,7 @@ section {
 .pdf {
   max-width: 80vw;
   max-height: 80vh;
+  max-height: calc(var(--vvh, 1vh) * 80);
   @include absolute-center;
   &__frame {
     border-bottom: 4px solid #323639;

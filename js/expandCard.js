@@ -8,6 +8,13 @@ let cardPos;
 
 ["resize", "load"].forEach((event) => {
   window.addEventListener(event, function (e) {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vvh", `${vh}px`);
+  });
+});
+
+["resize", "load"].forEach((event) => {
+  window.addEventListener(event, function (e) {
     cardPos = [...cardBack].map((card) => [
       cardBack[0].getBoundingClientRect().x - card.getBoundingClientRect().x,
       cardBack[0].getBoundingClientRect().y - card.getBoundingClientRect().y,
