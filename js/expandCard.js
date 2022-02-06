@@ -56,7 +56,7 @@ cardList.forEach((card, i) => {
     if (card.previousElementSibling.checked == false) {
       card.querySelector(
         ".card__side--back"
-      ).style.transform = `rotateY(-180deg) translate(0,0)`;
+      ).style.transform = `translate(0,0) rotateY(180deg)`;
     }
   });
 });

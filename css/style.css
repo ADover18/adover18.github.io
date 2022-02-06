@@ -194,7 +194,6 @@ h5 {
       .card__side--front-Portfolio {
         line-height: 2.5; }
     .card__side--back {
-      transform: translate(0, 0) rotateY(-180deg);
       background-color: #fff;
       font-size: 1.4rem;
       padding: 1.3rem;
@@ -224,6 +223,8 @@ h5 {
     transform: rotateY(0);
     height: calc(72vh + 3.6rem);
     width: 80vw; }
+  .flipcard-checkbox:not(:checked) + .card .card__side--back {
+    transform: translate(0, 0) rotateY(180deg); }
 
 .collapsible__checkbox {
   display: none; }

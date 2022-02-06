@@ -91,7 +91,6 @@
       }
     }
     &--back {
-      transform: translate(0, 0) rotateY(-180deg);
       background-color: $color-white;
       font-size: 1.4rem;
       // line-height: 3rem;
@@ -141,5 +140,8 @@
     transform: rotateY(0);
     height: calc(72vh + 3.6rem);
     width: 80vw;
+  }
+  &:not(:checked) + .card .card__side--back {
+    transform: translate(0, 0) rotateY(180deg);
   }
 }
