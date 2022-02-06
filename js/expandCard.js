@@ -47,16 +47,29 @@ let cardPos;
 // });
 
 cardList.forEach((card, i) => {
-  card.previousElementSibling.addEventListener("change", function (e) {
-    if (card.previousElementSibling.checked == true) {
+  if (window.matchMedia("(hover: hover)").matches) {
+    card.addEventListener("mouseenter", function (e) {
       card.querySelector(
         ".card__side--back"
       ).style.transform = `translate(${cardPos[i][0]}px, ${cardPos[i][1]}px)`;
-    }
-    if (card.previousElementSibling.checked == false) {
+    });
+    card.addEventListener("mouseleave", function (e) {
       card.querySelector(
         ".card__side--back"
       ).style.transform = `translate(0,0) rotateY(180deg)`;
-    }
-  });
+    });
+  } else {
+    card.previousElementSibling.addEventListener("change", function (e) {
+      if (card.previousElementSibling.checked == true) {
+        card.querySelector(
+          ".card__side--back"
+        ).style.transform = `translate(${cardPos[i][0]}px, ${cardPos[i][1]}px)`;
+      }
+      if (card.previousElementSibling.checked == false) {
+        card.querySelector(
+          ".card__side--back"
+        ).style.transform = `translate(0,0) rotateY(180deg)`;
+      }
+    });
+  }
 });

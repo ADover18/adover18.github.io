@@ -201,6 +201,18 @@ h5 {
       flex-direction: column;
       justify-content: space-between;
       color: #333; }
+  @media (any-hover: hover) {
+    .card:hover {
+      z-index: 555555 !important;
+      transition-delay: 0s; }
+    .card:hover .card__side--front {
+      transform: rotateY(-180deg); }
+    .card:hover .card__side--back {
+      transform: rotateY(0);
+      height: calc(72vh + 3.6rem);
+      width: 80vw; }
+    .card:not(:hover) .card__side--back {
+      transform: translate(0, 0) rotateY(180deg); } }
   .card__logo {
     height: 60%; }
     .card__logo {
@@ -214,17 +226,18 @@ h5 {
 
 .flipcard-checkbox {
   display: none; }
-  .flipcard-checkbox:checked + .card {
-    z-index: 555555 !important;
-    transition-delay: 0s; }
-  .flipcard-checkbox:checked + .card .card__side--front {
-    transform: rotateY(-180deg); }
-  .flipcard-checkbox:checked + .card .card__side--back {
-    transform: rotateY(0);
-    height: calc(72vh + 3.6rem);
-    width: 80vw; }
-  .flipcard-checkbox:not(:checked) + .card .card__side--back {
-    transform: translate(0, 0) rotateY(180deg); }
+  @media (any-hover: none) {
+    .flipcard-checkbox:checked + .card {
+      z-index: 555555 !important;
+      transition-delay: 0s; }
+    .flipcard-checkbox:checked + .card .card__side--front {
+      transform: rotateY(-180deg); }
+    .flipcard-checkbox:checked + .card .card__side--back {
+      transform: rotateY(0);
+      height: calc(72vh + 3.6rem);
+      width: 80vw; }
+    .flipcard-checkbox:not(:checked) + .card .card__side--back {
+      transform: translate(0, 0) rotateY(180deg); } }
 
 .collapsible__checkbox {
   display: none; }

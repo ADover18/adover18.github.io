@@ -102,20 +102,26 @@
       // z-index: 0;
     }
   }
-  // HOVER EFFECTS TO BE IMPLEMENTED FOR NON TOUCH SCREENS
-  // &:hover {
-  //   z-index: 555555 !important;
-  //   transition-delay: 0s;
-  // }
-  // &:hover &__side--front {
-  //   transform: rotateY(-180deg);
-  // }
 
-  // &:hover &__side--back {
-  //   transform: rotateY(0);
-  //   height: 80vh;
-  //   width: 80vw;
-  // }
+  // HOVER EFFECTS IMPLEMENTED FOR NON TOUCH SCREENS
+  @media (any-hover: hover) {
+    &:hover {
+      z-index: 555555 !important;
+      transition-delay: 0s;
+    }
+    &:hover &__side--front {
+      transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+      transform: rotateY(0);
+      height: calc(72vh + 3.6rem);
+      width: 80vw;
+    }
+    &:not(:hover) &__side--back {
+      transform: translate(0, 0) rotateY(180deg);
+    }
+  }
 
   &__logo {
     height: 60%;
@@ -129,19 +135,22 @@
 
 .flipcard-checkbox {
   display: none;
-  &:checked + .card {
-    z-index: 555555 !important;
-    transition-delay: 0s;
-  }
-  &:checked + .card .card__side--front {
-    transform: rotateY(-180deg);
-  }
-  &:checked + .card .card__side--back {
-    transform: rotateY(0);
-    height: calc(72vh + 3.6rem);
-    width: 80vw;
-  }
-  &:not(:checked) + .card .card__side--back {
-    transform: translate(0, 0) rotateY(180deg);
+  // TOUCH EFFECTS IMPLEMENTED FOR TOUCH SCREENS
+  @media (any-hover: none) {
+    &:checked + .card {
+      z-index: 555555 !important;
+      transition-delay: 0s;
+    }
+    &:checked + .card .card__side--front {
+      transform: rotateY(-180deg);
+    }
+    &:checked + .card .card__side--back {
+      transform: rotateY(0);
+      height: calc(72vh + 3.6rem);
+      width: 80vw;
+    }
+    &:not(:checked) + .card .card__side--back {
+      transform: translate(0, 0) rotateY(180deg);
+    }
   }
 }
