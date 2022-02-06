@@ -305,7 +305,8 @@ h5 {
     width: 100%;
     border: 1px solid #eee;
     padding: 1rem;
-    font-family: "Lato"; }
+    font-family: "Lato";
+    font-size: 1.6rem; }
     .form__input input {
       height: 3.5rem; }
     .form__input:focus {
