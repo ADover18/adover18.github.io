@@ -194,7 +194,7 @@ h5 {
       .card__side--front-Portfolio {
         line-height: 2.5; }
     .card__side--back {
-      transform: rotateY(180deg);
+      transform: translate(0, 0) rotateY(-180deg);
       background-color: #fff;
       font-size: 1.4rem;
       padding: 1.3rem;

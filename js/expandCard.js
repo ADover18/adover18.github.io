@@ -52,17 +52,11 @@ cardList.forEach((card, i) => {
       card.querySelector(
         ".card__side--back"
       ).style.transform = `translate(${cardPos[i][0]}px, ${cardPos[i][1]}px)`;
-      card.querySelector(
-        ".card__side--back"
-      ).style.webkitTransform = `translate(${cardPos[i][0]}px, ${cardPos[i][1]}px)`;
     }
     if (card.previousElementSibling.checked == false) {
       card.querySelector(
         ".card__side--back"
       ).style.transform = `rotateY(-180deg) translate(0,0)`;
-      card.querySelector(
-        ".card__side--back"
-      ).style.webkitTransform = `rotateY(-180deg) translate(0,0)`;
     }
   });
 });

@@ -91,7 +91,7 @@
       }
     }
     &--back {
-      transform: rotateY(180deg);
+      transform: translate(0, 0) rotateY(-180deg);
       background-color: $color-white;
       font-size: 1.4rem;
       // line-height: 3rem;
