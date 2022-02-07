@@ -283,7 +283,7 @@ h5 {
     .card:hover .card__side--back {
       transform: rotateY(0);
       height: calc(72vh + 3.6rem);
-      height: calc(var(--vvh, 1vh) * 72 + 3.6rem);
+      height: calc(var(--vvh, 1vh) * 72 + 4.2rem);
       width: 80vw; }
     .card:not(:hover) .card__side--back {
       transform: translate3d(0, 0, 0) rotateY(180deg); } }

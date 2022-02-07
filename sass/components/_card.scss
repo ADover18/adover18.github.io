@@ -118,7 +118,7 @@
     &:hover &__side--back {
       transform: rotateY(0);
       height: calc(72vh + 3.6rem);
-      height: calc(var(--vvh, 1vh) * 72 + 3.6rem);
+      height: calc(var(--vvh, 1vh) * 72 + 4.2rem);
       width: 80vw;
     }
     &:not(:hover) &__side--back {
