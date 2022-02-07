@@ -4,13 +4,18 @@ const cardBack = document.querySelectorAll(".card__side--back");
 
 let cardPos;
 
-["resize", "load"].forEach((event) => {
-  window.addEventListener(event, function (e) {
-    cardPos = [...cardBack].map((card) => [
-      cardBack[0].getBoundingClientRect().x - card.getBoundingClientRect().x,
-      cardBack[0].getBoundingClientRect().y - card.getBoundingClientRect().y,
-    ]);
-  });
+const setCardPos = () => {
+  cardPos = [...cardBack].map((card) => [
+    cardBack[0].getBoundingClientRect().x - card.getBoundingClientRect().x,
+    cardBack[0].getBoundingClientRect().y - card.getBoundingClientRect().y,
+  ]);
+};
+
+window.addEventListener("load", function (e) {
+  setTimeout(setCardPos(), 10000);
+});
+window.addEventListener("resize", function (e) {
+  setCardPos();
 });
 
 const cardShowBack = (card, i) => {
