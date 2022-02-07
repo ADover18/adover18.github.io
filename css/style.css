@@ -208,7 +208,7 @@ h5 {
   height: 18vh;
   height: calc(var(--vvh, 1vh) * 18);
   z-index: 0;
-  margin: 1rem; }
+  margin: 0.7rem; }
   .card__text {
     width: 100%;
     text-align: center; }
