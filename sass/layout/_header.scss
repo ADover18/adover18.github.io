@@ -6,6 +6,7 @@
   // overflow-y: auto;
   line-height: 3;
   scroll-snap-align: start;
+
   &__divider {
     @include absolute-center;
     width: --headings-length;
@@ -29,15 +30,28 @@
     @media only screen and (min-width: 600px) {
       font-size: 3rem;
     }
+    // CSS ANIMATION NOT CURRENTLY WORKING SO IMPLEMENTED IN JS - SAFARI BUG
     &:first-child {
-      animation: slideTopHeading 4s linear forwards;
+      -webkit-transform: translate(
+        var(--heading1-x-movement),
+        var(--heading1-y-movement)
+      );
+      transform: translate(
+        var(--heading1-x-movement),
+        var(--heading1-y-movement)
+      );
+      // animation: slideTopHeading 6s linear forwards;
     }
     &:last-child {
-      animation: slideBottomHeading 4s linear forwards;
+      transform: translate(
+        var(--heading2-x-movement),
+        var(--heading2-y-movement)
+      );
+      // animation: slideBottomHeading 6s linear forwards;
     }
   }
   &__info {
-    animation: fadeOut 4s linear forwards;
+    animation: fadeIn 4s linear forwards;
   }
   &__text-box {
     padding: 0 3rem;
@@ -49,26 +63,24 @@
     width: 20rem;
   }
   &__divider {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: drawSVGPath 2s linear 4s forwards;
+    animation: undrawSVGPath 2s linear forwards;
   }
 }
 
-.aside {
-  width: 6rem;
-  white-space: nowrap;
+// .aside {
+//   width: 6rem;
+//   white-space: nowrap;
 
-  font-size: 1.2rem;
+//   font-size: 1.2rem;
 
-  &--left {
-    transform: rotate(-90deg);
-    transform-origin: -5px 0;
-    align-self: flex-end;
-  }
-  &--right {
-    transform: rotate(90deg);
-    transform-origin: 60px 0;
-    align-self: flex-start;
-  }
-}
+//   &--left {
+//     transform: rotate(-90deg);
+//     transform-origin: -5px 0;
+//     align-self: flex-end;
+//   }
+//   &--right {
+//     transform: rotate(90deg);
+//     transform-origin: 60px 0;
+//     align-self: flex-start;
+//   }
+// }

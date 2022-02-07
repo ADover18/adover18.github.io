@@ -9,43 +9,57 @@ const findCenter = (el) => [
   el.getBoundingClientRect().y + el.getBoundingClientRect().height / 2,
 ];
 
-const posDifference = (el1, el2) => [
-  findCenter(el1)[0] - findCenter(el2)[0],
-  findCenter(el1)[1] - findCenter(el2)[1],
-];
+const movements = [...headings].map((heading, i) => [
+  findCenter(header)[0] - findCenter(heading)[0],
+  findCenter(header)[1] -
+    findCenter(heading)[1] +
+    heading.getBoundingClientRect().height * 1.1 * (i * i + i - 1),
+]);
 
-[("resize", "load")].forEach((event) => {
-  window.addEventListener(event, function (e) {
-    let heading1XMovement = `${posDifference(header, headings[0])[0]}px`;
-    let heading1YMovement = `${
-      posDifference(header, headings[0])[1] -
-      headings[0].getBoundingClientRect().height * 1.2
-    }px`;
-    let heading2XMovement = `${posDifference(header, headings[1])[0]}px`;
-    let heading2YMovement = `${
-      posDifference(header, headings[1])[1] +
-      +headings[1].getBoundingClientRect().height * 1.1
-    }px`;
-    let headingsLength = `${headings[0].getBoundingClientRect().width}px`;
-    document.documentElement.style.setProperty(
-      "--heading1-x-movement",
-      heading1XMovement
-    );
-    document.documentElement.style.setProperty(
-      "--heading1-y-movement",
-      heading1YMovement
-    );
-    document.documentElement.style.setProperty(
-      "--heading2-x-movement",
-      heading2XMovement
-    );
-    document.documentElement.style.setProperty(
-      "--heading2-y-movement",
-      heading2YMovement
-    );
-    document.documentElement.style.setProperty(
-      "--headings-length",
-      headingsLength
-    );
-  });
+const headingsLength = `${headings[0].getBoundingClientRect().width}px`;
+document.documentElement.style.setProperty(
+  "--heading1-x-movement",
+  `${movements[0][0]}px`
+);
+document.documentElement.style.setProperty(
+  "--heading1-y-movement",
+  `${movements[0][1]}px`
+);
+document.documentElement.style.setProperty(
+  "--heading2-x-movement",
+  `${movements[1][0]}px`
+);
+document.documentElement.style.setProperty(
+  "--heading2-y-movement",
+  `${movements[1][1]}px`
+);
+document.documentElement.style.setProperty("--headings-length", headingsLength);
+console.log(
+  document.documentElement.style.getPropertyValue("--headings-length")
+);
+
+// BUG FIX FOR SAFARI TO ALLOW VARIABLES IN ANIMATION
+
+textBlocks.forEach((textBlock, i) => {
+  textBlock.animate(
+    [
+      {
+        transform: `translate(var(--heading${i + 1}-x-movement), var(--heading${
+          i + 1
+        }-y-movement))`,
+      },
+      {
+        transform: `translate(var(--heading${i + 1}-x-movement), var(--heading${
+          i + 1
+        }-y-movement))`,
+      },
+      { transform: "translate(0,0)" },
+    ],
+    {
+      // timing options
+      duration: 4000,
+      fill: "forwards",
+      iterations: 1,
+    }
+  );
 });

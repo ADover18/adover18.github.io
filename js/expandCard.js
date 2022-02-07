@@ -16,13 +16,13 @@ let cardPos;
 const cardShowBack = (card, i) => {
   card.querySelector(
     ".card__side--back"
-  ).style.transform = `translate(${cardPos[i][0]}px, ${cardPos[i][1]}px)`;
+  ).style.transform = `translate3d(${cardPos[i][0]}px, ${cardPos[i][1]}px, 0)`;
 };
 
 const cardShowFront = (card) => {
   card.querySelector(
     ".card__side--back"
-  ).style.transform = `translate(0,0) rotateY(180deg)`;
+  ).style.transform = `translate3d(0,0,0) rotateY(180deg)`;
 };
 
 cardList.forEach((card, i) => {

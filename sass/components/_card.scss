@@ -122,7 +122,7 @@
       width: 80vw;
     }
     &:not(:hover) &__side--back {
-      transform: translate(0, 0) rotateY(180deg);
+      transform: translate3d(0, 0, 0) rotateY(180deg);
     }
   }
 
@@ -154,7 +154,7 @@
       width: 80vw;
     }
     &:not(:checked) + .card .card__side--back {
-      transform: translate(0, 0) rotateY(180deg);
+      transform: translate3d(0, 0, 0) rotateY(180deg);
     }
   }
 }

@@ -10,26 +10,69 @@
 }
 
 @keyframes slideTopHeading {
-  50% {
-    transform: translate(0, 0);
-  }
-  100% {
+  // 0% {
+  //   -webkit-transform: translate(0, 0);
+  //   transform: translate(0, 0);
+  // }
+
+  // 50% {
+  //   -o-transform: translate(0, 0);
+  //   -ms-transform: translate(0, 0);
+  //   -webkit-transform: translate(0, 0);
+  //   transform: translate(0, 0);
+  // }
+  33% {
+    -o-transform: translate(
+      var(--heading1-x-movement),
+      var(--heading1-y-movement)
+    );
+    -ms-transform: translate(
+      var(--heading1-x-movement),
+      var(--heading1-y-movement)
+    );
+    -webkit-transform: translate(
+      var(--heading1-x-movement),
+      var(--heading1-y-movement)
+    );
     transform: translate(
       var(--heading1-x-movement),
       var(--heading1-y-movement)
     );
   }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes slideBottomHeading {
-  50% {
-    transform: translate(0, 0);
-  }
-  100% {
+  // 0% {
+  //   -webkit-transform: translate(0, 0);
+  //   transform: translate(0, 0);
+  // }
+  // 50% {
+  //   -webkit-transform: translate(0, 0);
+  //   transform: translate(0, 0);
+  // }
+  // 100% {
+  //   // BROKEN IN SAFARI
+  //   -webkit-transform: translate(
+  //     var(--heading2-x-movement),
+  //     var(--heading2-y-movement)
+  //   );
+  // transform: translate(
+  //   var(--heading2-x-movement),
+  //   var(--heading2-y-movement)
+  // );
+  // transform: translate(10px, 10px);
+  // }
+  33% {
     transform: translate(
       var(--heading2-x-movement),
       var(--heading2-y-movement)
     );
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
 
@@ -42,13 +85,30 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes slideTopInfo {
   0% {
     opacity: 1;
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
   100% {
     opacity: 0;
+    -webkit-transform: translate(
+      var(--heading1-x-movement),
+      var(--heading1-y-movement)
+    );
     transform: translate(
       var(--heading1-x-movement),
       var(--heading1-y-movement)
@@ -63,6 +123,10 @@
   }
   100% {
     opacity: 0;
+    -webkit-transform: translate(
+      var(--heading2-x-movement),
+      var(--heading2-y-movement)
+    );
     transform: translate(
       var(--heading2-x-movement),
       var(--heading2-y-movement)
@@ -76,5 +140,15 @@
   }
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes undrawSVGPath {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
   }
 }
