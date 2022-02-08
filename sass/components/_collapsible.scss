@@ -4,7 +4,7 @@
     display: none;
   }
   &__checkbox:checked ~ &__section {
-    max-height: 30rem;
+    max-height: 50rem;
   }
   &__checkbox:checked ~ &__section &__icon,
   &__checkbox:checked ~ &__section &__icon:after {
