@@ -239,8 +239,7 @@ h5 {
     left: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     overflow: hidden;
     text-align: left; }
     .card__side-description {
@@ -283,7 +282,7 @@ h5 {
     .card:hover .card__side--back {
       transform: rotateY(0);
       height: calc(72vh + 3.6rem);
-      height: calc(var(--vvh, 1vh) * 72 + 4.2rem);
+      height: calc(var(--vvh, 1vh) * 73 + 4.2rem);
       width: 80vw; }
     .card:not(:hover) .card__side--back {
       transform: translate3d(0, 0, 0) rotateY(180deg); } }
@@ -314,60 +313,55 @@ h5 {
     .flipcard-checkbox:not(:checked) + .card .card__side--back {
       transform: translate3d(0, 0, 0) rotateY(180deg); } }
 
-.collapsible__checkbox {
-  display: none; }
-
-.collapsible__checkbox:checked ~ .collapsible__section {
-  max-height: 30rem; }
-
-.collapsible__checkbox:checked ~ .collapsible__section .collapsible__icon,
-.collapsible__checkbox:checked ~ .collapsible__section .collapsible__icon:after {
-  transform: rotate(180deg); }
-
-.collapsible__checkbox:checked ~ .collapsible__section .collapsible__content {
-  opacity: 1;
-  transform: translateY(0); }
-
-.collapsible__section {
-  transition: max-height 0.5s ease-in-out;
-  transform-style: preserve-3d;
-  display: block;
-  max-height: 6rem;
-  padding: 10px 15px;
-  overflow: hidden;
-  cursor: pointer;
-  background: #fff;
-  position: relative;
-  border-bottom: 3px solid #777; }
-
-.collapsible__header {
-  background-color: #fff;
-  font-weight: 300; }
-
-.collapsible__icon {
-  top: 2.7rem;
-  right: 1rem; }
-  .collapsible__icon, .collapsible__icon::after {
-    width: 1.7rem;
-    height: 1.8px;
-    background-color: #777;
+.collapsible {
+  font-size: 2rem; }
+  .collapsible__checkbox {
+    display: none; }
+  .collapsible__checkbox:checked ~ .collapsible__section {
+    max-height: 30rem; }
+  .collapsible__checkbox:checked ~ .collapsible__section .collapsible__icon,
+  .collapsible__checkbox:checked ~ .collapsible__section .collapsible__icon:after {
+    transform: rotate(180deg); }
+  .collapsible__checkbox:checked ~ .collapsible__section .collapsible__content {
+    opacity: 1;
+    transform: translateY(0); }
+  .collapsible__section {
+    transition: max-height 0.5s ease-in-out;
+    transform-style: preserve-3d;
     display: block;
-    position: absolute;
-    transition: transform 0.5s ease-in-out; }
-  .collapsible__icon::after {
-    content: "";
-    transform: rotate(90deg); }
-
-.collapsible__content {
-  margin-top: 1rem;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  font-size: 1.5rem;
-  opacity: 0;
-  transform: translateY(-5rem);
-  z-index: -1;
-  color: #333;
-  line-height: 3rem;
-  font-weight: 400; }
+    max-height: 6rem;
+    padding: 10px 15px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #fff;
+    position: relative;
+    border-bottom: 3px solid #777; }
+  .collapsible__header {
+    background-color: #fff;
+    font-weight: 300; }
+  .collapsible__icon {
+    top: 2.7rem;
+    right: 1rem; }
+    .collapsible__icon, .collapsible__icon::after {
+      width: 1.7rem;
+      height: 1.8px;
+      background-color: #777;
+      display: block;
+      position: absolute;
+      transition: transform 0.5s ease-in-out; }
+    .collapsible__icon::after {
+      content: "";
+      transform: rotate(90deg); }
+  .collapsible__content {
+    margin-top: 1rem;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(-5rem);
+    z-index: -1;
+    color: #333;
+    line-height: 3rem;
+    font-weight: 400; }
 
 .form {
   display: flex;
@@ -551,7 +545,8 @@ section {
   height: 100vh;
   height: calc(var(--vvh, 1vh) * 100);
   scroll-snap-align: start;
-  font-size: 2rem; }
+  font-size: 1.6rem;
+  overflow-y: scroll; }
 
 .aboutme {
   font-weight: 300; }
