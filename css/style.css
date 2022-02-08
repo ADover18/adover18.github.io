@@ -111,8 +111,6 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
-  .pdf__frame {
-    border-bottom: 4px solid #323639; }
 
 fieldset {
   border-width: 0 !important; }
