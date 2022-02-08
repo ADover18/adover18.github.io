@@ -3,7 +3,7 @@
     display: none;
   }
   &__button {
-    background-color: $color-white;
+    background-color: rgba($color-white, 0.7);
     height: 4rem;
     width: 4rem;
     position: fixed;
