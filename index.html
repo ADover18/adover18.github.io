@@ -26,6 +26,7 @@
     <script type="module" defer src="js/setViewportUnits.js"></script>
     <script type="module" defer src="js/expandCard.js"></script>
     <script type="module" defer src="js/animateHero.js"></script>
+    <script type="module" defer src="js/navigation.js"></script>
     <title>Alex Dover | Web Developer</title>
   </head>
   <body>
@@ -41,7 +42,41 @@
       </div>
       <div class="parallax-group outro-screen" id="outro">The End</div>
     </div> -->
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon"></span>
+      </label>
+
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#aboutme" class="navigation__link">
+              <span>01</span>About Me</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#projects" class="navigation__link"
+              ><span>02</span>Projects</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#skills" class="navigation__link"
+              ><span>03</span>Skills</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a href="#cv" class="navigation__link"><span>04</span>CV</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#contact" class="navigation__link"><span>05</span>Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div class="parallax-wrapper">
       <header class="header" id="header">
         <div class="header__text-box">
@@ -69,7 +104,7 @@
           ---------------------------------------------------------------------------------------------------------------------
         </aside> -->
         <p class="aboutme__text">
-          Until Summer 2021, I was a Primary School Teacher who enjoyed building small scale programmes and providing tech support to my friends and collegues. Initially, I worked my way through the book <a href="https://greenteapress.com/wp/think-python/" class="aboutme__link"><em>Think&nbsp;Python</em></a> and really enjoyed the satsfaction of creating small solutions to coding puzzles. During this time, I set myself the challenge of creating a social media site for sharing recipes and made a very small start with this project. Admitedly, being new to programing, I very quickly became defated by Django but it gave me a good introduction to HTML and CSS. I decided to go back to the project when I felt more ready. <br /><br>
+          Until Summer 2021, I was a Primary School Teacher who enjoyed building small scale programmes and providing tech support to my friends and colleagues. Initially, I worked my way through the book <a href="https://greenteapress.com/wp/think-python/" class="aboutme__link"><em>Think&nbsp;Python</em></a> and really enjoyed the satisfaction of creating small solutions to coding puzzles. During this time, I set myself the challenge of creating a social media site for sharing recipes and made a very small start with this project. Admittedly, being new to programming, I very quickly became defeated by Django but it gave me a good introduction to HTML and CSS. I decided to go back to the project when I felt more ready. <br /><br>
           Last year I made the jump from teaching to software and since July I've fully committed my time to this. I've learnt JavaScript through <a href="https://www.udemy.com/course/the-complete-javascript-course/" class="aboutme__link"><em>Jonas Schmettman's Udemy course</em> </a>  and used my knowledge of this, along with HTML and CSS to improve friends and family member's websites. Through learning JavaScript I gained a better understanding of data structures, design patterns and object orientated programming. Equipped with this knowledge, I went on to learn Django and completed the social media site I had started.<br /><br />
           Since Christmas, I have learnt <a href="https://www.udemy.com/course/advanced-css-and-sass/"><em>Sass and Advanced CSS </em>through Udemy</a> and have applied my knowledge to creating this site. I am currently learning React and look forward to building my first React project.
           <br /><br /> 
