@@ -42,6 +42,7 @@
       </div>
       <div class="parallax-group outro-screen" id="outro">The End</div>
     </div> -->
+    <div class="viewport"></div>
     <div class="navigation">
       <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 
@@ -55,29 +56,31 @@
         <ul class="navigation__list">
           <li class="navigation__item">
             <a href="#aboutme" class="navigation__link">
-              <span>01</span>About Me</a
+              <span class="navigation__id">01</span>About Me</a
             >
           </li>
           <li class="navigation__item">
             <a href="#projects" class="navigation__link"
-              ><span>02</span>Projects</a
+              ><span class="navigation__id">02</span>Projects</a
             >
           </li>
           <li class="navigation__item">
-            <a href="#skills" class="navigation__link"><span>03</span>Skills</a>
+            <a href="#skills" class="navigation__link"
+              ><span class="navigation__id">03</span>Skills</a
+            >
           </li>
           <li class="navigation__item">
             <a href="#cv" class="navigation__link"><span>04</span>CV</a>
           </li>
           <li class="navigation__item">
             <a href="#contact" class="navigation__link"
-              ><span>05</span>Contact</a
+              ><span class="navigation__id">05</span>Contact</a
             >
           </li>
         </ul>
       </nav>
     </div>
-    <div class="parallax-wrapper">
+    <div class="scroll-snap-wrapper">
       <header class="header" id="header">
         <div class="header__text-box">
           <p class="header__text">
@@ -89,7 +92,6 @@
           <svg
             class="header__divider"
             height="5"
-            width="500"
             stroke="#777"
             stroke-width="5"
           >
@@ -406,31 +408,37 @@
             class="flipcard-checkbox"
             id="flipcard-toggle--3"
           />
-          <label for="flipcard-toggle--3" class="card" href="#" id="#Portfolio">
+          <label for="flipcard-toggle--3" class="card" id="#SGWrites">
             <div
-              class="card__side card__side--front card__side--front-Portfolio"
+              class="card__side card__side--front card__side--front-SGWrites"
             >
               <p class="card__text">
-                <span class="card__text--higher">Alex Dover</span>
-                <br />
-                <span class="card__text--lower">Web Developer</span>
+                Sam Glover<br />
+                Writes
               </p>
             </div>
             <div class="card__side card__side--back">
-              <img
-                src="img/project-portfolio.png"
-                alt="Image of Portfolio Website"
-                class="card__img project-img"
-              />
-              <span class="card__side-description card__side-description"
-                >Web Developement Portfolio Website</span
+              <video
+                src="img/project-SGWrites.mp4"
+                class="card__img project-video"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+              <span class="card__side-description"
+                >Portfolio Website for Poet, Sam Glover</span
               >
               <span
-                >This webiste was created in HTML and CSS. I used it as an
-                opportunity to develop skills in advanced CSS and Sass.</span
-              >
+                >This project was created using HTML and CSS. The writer
+                requested that font sizes were responsive to the viewport to
+                minimise improper line breaks in the poetry. I implemented this
+                and added styling to the site.
+              </span>
 
-              <a href="#header" class="btn">Back to Start</a>
+              <a href="https://samgloverwrites.netlify.app" class="btn"
+                >Visit Website</a
+              >
             </div>
           </label>
           <input
@@ -465,16 +473,16 @@
                 >Other Projects I have been involved in include:</span
               >
               <li class="u-margin-left">
+                Web Development Portfolio Site<br />
+                This webiste was created in HTML and CSS. I used it as an
+                opportunity to develop skills in advanced CSS and Sass.
+              </li>
+              <li class="u-margin-left">
                 Noughts and Crosses<br />
                 A noughts and crosses game written in C#. I collaborated with
                 another developer using git pull requests. I refactored the code
                 to make it more DRY. I also improved the UI so that the rows and
                 columns printed in line when the program runs in the terminal.
-              </li>
-              <li class="u-margin-left">
-                Sam Glover Writes<br />
-                Portfolio website for poet Sam Glover. I added styling using CSS
-                and JavaScript.
               </li>
               <a href="https://github.com/ADover18" class="btn"
                 >Visit my Github</a
@@ -548,15 +556,18 @@
             />
             <label for="collapsible__toggle--3" class="collapsible__section">
               <div class="collapsible__header">
-                <h3 class="collapsible__heading">CSS & Sass</h3>
+                <h3 class="collapsible__heading">HTML, CSS & Sass</h3>
                 <span class="collapsible__icon"></span>
               </div>
               <p class="collapsible__content">
-                — &nbsp;&nbsp; Responsive Design <br />
-                — &nbsp;&nbsp; BEM <br />
+                — &nbsp;&nbsp; Responsive Design (responsive units, flexbox,
+                media queries) <br />
+                — &nbsp;&nbsp; BEM Naming Convensions <br />
+                — &nbsp;&nbsp; Using semantic elements for clear markup <br />
+                — &nbsp;&nbsp; 7-1 Sass Archetecture <br />
                 — &nbsp;&nbsp; Bootstrap <br />
-                — &nbsp;&nbsp; SVG <br />
-                — &nbsp;&nbsp; Animation
+                — &nbsp;&nbsp; Creating layouts with Flexbox and Grid. Also able
+                to work with float and tables in older sites.
               </p>
             </label>
           </div>

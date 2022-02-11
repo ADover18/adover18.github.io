@@ -1,8 +1,11 @@
 .scroll-snap-wrapper {
+  height: 100vh;
+  height: calc(var(--vvh, 1vh) * 100);
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
+  margin: 0;
+  padding: 0;
   scroll-snap-type: y mandatory;
-
-  // section {
-  //   scroll-snap-align: start;
-  //   scroll-snap-stop: always;
-  // }
+  scroll-behavior: smooth;
 }

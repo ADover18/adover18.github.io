@@ -3,7 +3,7 @@ const textBlocks = document.querySelectorAll(".header__text");
 const headings = document.querySelectorAll(".header__heading");
 
 const header = document.querySelectorAll(".header")[0];
-
+console.log(header[0], header[1]);
 const findCenter = (el) => [
   el.getBoundingClientRect().x + el.getBoundingClientRect().width / 2,
   el.getBoundingClientRect().y + el.getBoundingClientRect().height / 2,
@@ -16,7 +16,12 @@ const movements = [...headings].map((heading, i) => [
     heading.getBoundingClientRect().height * 1.1 * (i * i + i - 1),
 ]);
 
-const headingsLength = `${headings[0].getBoundingClientRect().width}px`;
+const headingsLength = `${headings[1].getBoundingClientRect().width}px`;
+
+document
+  .querySelector(".header__divider")
+  .setAttribute("width", headingsLength);
+
 document.documentElement.style.setProperty(
   "--heading1-x-movement",
   `${movements[0][0]}px`
@@ -41,6 +46,23 @@ console.log(
 // BUG FIX FOR SAFARI TO ALLOW VARIABLES IN ANIMATION
 
 textBlocks.forEach((textBlock, i) => {
+  // textBlock.querySelector(".header__heading").animate(
+  //   [
+  //     {
+  //       textTransform: "uppercase",
+  //     },
+  //     // {
+  //     //   textTransform: "uppercase",
+  //     // },
+  //     { textTransform: "none" },
+  //   ],
+  //   {
+  //     // timing options
+  //     duration: 4000,
+  //     fill: "forwards",
+  //     iterations: 1,
+  //   }
+  // );
   textBlock.animate(
     [
       {
