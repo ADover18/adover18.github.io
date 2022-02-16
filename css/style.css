@@ -340,12 +340,12 @@ h5 {
       transform: translate3d(0, 0, 0) rotateY(180deg); } }
 
 .collapsible {
-  margin: 0 1.5rem;
   width: 100%;
   font-size: 2rem; }
   @media only screen and (min-width: 63em) {
     .collapsible {
-      width: calc(((100vw - 15rem) / 3)); } }
+      width: calc(((100vw - 15rem) / 3));
+      margin: 0 1.5rem; } }
   .collapsible__checkbox {
     display: none; }
   .collapsible__checkbox:checked ~ .collapsible__section {
