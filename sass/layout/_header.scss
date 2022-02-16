@@ -1,10 +1,8 @@
 .header {
   top: 0;
-  background-color: $color-white;
-  height: 100vh; // overflow-x: hidden;
+  height: 100vh;
   height: calc(var(--vvh, 1vh) * 100);
-  // overflow-y: auto;
-  line-height: 3;
+  line-height: 3.2;
   scroll-snap-align: start;
 
   &__divider {
@@ -12,35 +10,22 @@
     width: --headings-length;
   }
   &__heading {
-    line-height: 2;
+    line-height: 1.7;
     font-weight: 300;
-    font-size: 2.5rem;
-    letter-spacing: 10px;
+    font-size: calc(20px + 1.53vw);
+    letter-spacing: 5px;
+    @media only screen and (min-width: 23.75em) {
+      letter-spacing: 10px;
+    }
     text-transform: uppercase;
-    @media only screen and (min-width: 47em) {
-      font-size: 2.8rem;
-    }
-    @include respond(tab-land) {
-      font-size: 3.5rem;
-    }
   }
 
   &__text {
-    font-size: 2rem;
-    // font-size: 2rem;
+    text-align: left;
+    display: inline-block;
+    font-size: calc(18px + 0.58vw);
     margin-bottom: 0 !important;
-    // animation: moveInBottom 2s ease-out;
     font-weight: 300;
-    @media only screen and (min-width: 47em) {
-      font-size: 2.2rem;
-    }
-    @include respond(tab-land) {
-      font-size: 2.7rem;
-    }
-    // @media only screen and (min-width: 600px) {
-    //   font-size: 3rem;
-    // }
-    // width: 80vw;
     // CSS ANIMATION NOT CURRENTLY WORKING SO IMPLEMENTED IN JS - SAFARI BUG
     &:first-child {
       -webkit-transform: translate(
@@ -51,38 +36,43 @@
         var(--heading1-x-movement),
         var(--heading1-y-movement)
       );
-      // animation: slideTopHeading 6s linear forwards;
     }
     &:last-child {
       transform: translate(
         var(--heading2-x-movement),
         var(--heading2-y-movement)
       );
-      // animation: slideBottomHeading 6s linear forwards;
     }
   }
   &__info {
     animation: fadeIn 4s linear forwards;
   }
-  &__text-box {
-    padding: 3rem;
-    @include absolute-center;
+  &__CL {
     @media only screen and (min-width: 28em) {
-      border: 2px solid $color-grey-dark;
+      font-size: calc(40px + 3vw);
+      font-weight: 300;
     }
-    @include respond(tab-port) {
-      padding: 5rem;
-      width: 50rem;
+  }
+  &__text-box {
+    text-align: center;
+    padding: 3rem;
+    // max-width: 98vw;
+    max-width: 33.1rem;
+    // width: calc(292px + 22.33vw + 11rem);
+    @include absolute-center;
+    @media only screen and (min-width: 23.75em) {
+      max-width: 39.9rem;
     }
-    @media only screen and (min-width: 47em) {
-      width: 60rem;
-      padding: 7rem;
+    @media only screen and (min-width: 28em) {
+      max-width: 45.406rem;
     }
-    @include respond(tab-land) {
-      padding: 6rem 8rem;
-      width: 70rem;
-      line-height: 3.5;
+    @media only screen and (min-width: 48em) {
+      max-width: calc(400px + 22.63vw + 11rem);
+      width: calc(400px + 22.63vw + 11rem);
     }
+    // @include respond(tab-land) {
+    //   line-height: 3.5;
+    // }
   }
 
   &__img {

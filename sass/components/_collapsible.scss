@@ -1,5 +1,11 @@
 .collapsible {
+  margin: 0 1.5rem;
+  width: 100%;
   font-size: 2rem;
+  @media only screen and (min-width: 63em) {
+    width: calc(((100vw - 15rem) / 3));
+    // + calculate 100vw-9rem/3
+  }
   &__checkbox {
     display: none;
   }
@@ -56,7 +62,15 @@
     transform: translateY(-5rem);
     z-index: -1;
     color: $color-grey-dark-3;
-    line-height: 3rem;
     font-weight: 400;
+    list-style-type: "—    ";
+  }
+  &__item {
+    margin-left: 3rem;
+    margin-top: 1rem;
+    &::marker {
+      font-weight: 700;
+      color: $color-grey-dark-3;
+    }
   }
 }

@@ -13,20 +13,11 @@
     text-align: center;
     cursor: pointer;
 
-    @include respond(tab-port) {
+    @media only screen and(min-width: 42.125em) {
       display: none;
     }
   }
   &__background {
-    // @include respond(tab-port) {
-    //   top: 4.5rem;
-    //   right: 4.5rem;
-    // }
-
-    // @include respond(phone) {
-    //   top: 3.5rem;
-    //   right: 3.5rem;
-    // }
     height: calc(var(--vvh, 1vh) * 100);
     width: calc(var(--vvw, 1vw) * 100);
     position: fixed;
@@ -47,7 +38,7 @@
     background-color: $color-white;
     z-index: 1500;
     transition: all 0.8s ease-in-out;
-    @include respond(tab-port) {
+    @media only screen and(min-width: 42.125em) {
       height: 7rem;
       width: 100vw;
       transform: translateX(0rem);
@@ -64,7 +55,7 @@
     &:first-child {
       margin-top: 15rem;
     }
-    @include respond(tab-port) {
+    @media only screen and(min-width: 42.125em) {
       &,
       &:first-child {
         margin: 0rem;
@@ -92,26 +83,25 @@
       );
       background-size: 230%;
       transition: all 0.4s;
-      @include respond(tab-port) {
+      @media only screen and(min-width: 42.125em) {
         font-size: 1.5rem;
       }
       span {
         margin-right: 1.5rem;
         display: inline-block;
-        @include respond(tab-port) {
+        @media only screen and(min-width: 42.125em) {
           display: none;
         }
       }
-      @include respond(tab-port) {
+      @media only screen and(min-width: 42.125em) {
         padding: 2rem;
       }
     }
     &:hover,
     &:active {
       background-position: 100%;
-      // color: $color-primary;
       transform: translateX(1rem);
-      @include respond(tab-port) {
+      @media only screen and(min-width: 42.125em) {
         transform: translateX(0);
       }
     }

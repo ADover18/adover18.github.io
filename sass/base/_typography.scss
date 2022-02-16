@@ -3,7 +3,7 @@ body {
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: $color-grey-dark;
+  color: $color-tw-stgrey6;
 }
 
 .heading-primary {
@@ -12,10 +12,11 @@ body {
   text-transform: uppercase;
   letter-spacing: 3px;
   display: block;
+  font-weight: 300;
   &--centered {
     text-align: center;
   }
-  @include respond(tab-port) {
+  @media only screen and(min-width: 42.125em) {
     // padding: 7rem 0 2rem 0;
     color: $color-white;
     // font-size: 0.1rem;

@@ -9,11 +9,13 @@ const findCenter = (el) => [
   el.getBoundingClientRect().y + el.getBoundingClientRect().height / 2,
 ];
 
+const movementOffset = window.innerWidth < 448 ? 1 : 0.8;
+
 const movements = [...headings].map((heading, i) => [
   findCenter(header)[0] - findCenter(heading)[0],
   findCenter(header)[1] -
     findCenter(heading)[1] +
-    heading.getBoundingClientRect().height * 1.1 * (i * i + i - 1),
+    heading.getBoundingClientRect().height * 1.1 * (i * i + i - movementOffset),
 ]);
 
 const headingsLength = `${headings[1].getBoundingClientRect().width}px`;

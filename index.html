@@ -20,6 +20,10 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="css/icon-font.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -87,7 +91,11 @@
             <span class="header__info"
               >Hi, &nbsp;&nbsp;my name is&nbsp; &nbsp;</span
             >
-            <span class="header__heading"> Alex&nbsp;Dover.</span>
+            <span class="header__heading">
+              <span class="header__CL">A</span>lex&nbsp;<span class="header__CL"
+                >D</span
+              >over.</span
+            >
           </p>
           <svg
             class="header__divider"
@@ -98,8 +106,12 @@
             <line x1="0" y1="0" x2="500" y2="0" />
           </svg>
           <p class="header__text">
-            <span class="header__info">I am a&nbsp;&nbsp;</span>
-            <span class="header__heading">Web&nbsp;Developer</span><br />
+            <span class="header__info">I am a&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="header__heading"
+              ><span class="header__CL">W</span>eb&nbsp;<span class="header__CL"
+                >D</span
+              >eveloper</span
+            ><br />
             <span class="header__info">based in Edinburgh.</span>
           </p>
         </div>
@@ -110,12 +122,12 @@
           -------&nbsp;&nbsp;&nbsp; ABOUT ME &nbsp;&nbsp;&nbsp;
           ---------------------------------------------------------------------------------------------------------------------
         </aside> -->
-        <p class="aboutme__text">
+        <p class="aboutme__text u-margin-bottom-xsmall">
           My previous vocation was as a Primary School Teacher. I spent 6 years
           in the profession until 2021, and volunteered as the school IT
           coordinator in my most recent role.
-          <br />
-          <br />
+        </p>
+        <p class="aboutme__text u-margin-bottom-xsmall">
           In my spare time, I worked my way through the book
           <a
             href="https://greenteapress.com/wp/think-python/"
@@ -125,8 +137,9 @@
           and enjoyed the satisfaction of creating solutions to coding puzzles.
           I set myself the challenge of creating a Django social media site for
           sharing recipes and made a start with this project. I continued to
-          work on it over several years, eventually completing it last
-          December.<br /><br />
+          work on it over several years, eventually completing it last December.
+        </p>
+        <p class="aboutme__text u-margin-bottom-xsmall">
           Last year I made the commitment to dedicate all my time to retraining.
           I started using JavaScript after doing
           <a
@@ -136,19 +149,20 @@
           </a>
           . Once I’d built up my knowledge of JavaScript - along with HTML and
           CSS - I used it to help friends and family with their websites.
-          <br /><br />
+        </p>
+        <p class="aboutme__text">
           Learning JavaScript, I gained a deeper understanding of web
           development, design patterns and object orientated programming. I
           utilised this knowledge while completing my aforementioned social
           media web app project.
-          <br /><br />
+        </p>
+        <p class="aboutme__text">
           Since Christmas, I have learnt <a
             href="https://www.udemy.com/course/advanced-css-and-sass/"
             ><em>Sass and Advanced CSS </em>through Udemy</a
           >
           and have applied my knowledge to creating this site. I am currently
           learning React and look forward to building my first React project.
-          <br /><br />
         </p>
         <!-- <aside class="aside aside--right">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-------&nbsp;&nbsp;&nbsp;
@@ -497,7 +511,7 @@
           ---------------------------------------------------------------------------------------------------------------------
         </aside> -->
         <h2 class="heading-primary">Skills</h2>
-        <div class="wrapper">
+        <div class="grid grid--accordian">
           <div class="collapsible">
             <input
               type="checkbox"
@@ -510,17 +524,25 @@
                 <h3 class="collapsible__heading">Python & Django</h3>
                 <span class="collapsible__icon"></span>
               </div>
-              <p class="collapsible__content">
-                — &nbsp;&nbsp; Object Orientated Programming <br />
-                — &nbsp;&nbsp; MVP Design <br />
-                — &nbsp;&nbsp; Managing Migrations <br />
-                — &nbsp;&nbsp; Working with and Filtering QuerySets <br />
-                — &nbsp;&nbsp; Class Based Views <br />
-                — &nbsp;&nbsp; Using Django ORM<br />
-                — &nbsp;&nbsp; Relational Databases (PostgreSQL) <br />
-                — &nbsp;&nbsp; Creating Data Endpoints with JSON <br />
-                — &nbsp;&nbsp; Working with Model Forms and Formsets
-              </p>
+              <ul class="collapsible__content">
+                <li class="collapsible__item">Object Orientated Programming</li>
+                <li class="collapsible__item">MVP Design</li>
+                <li class="collapsible__item">Managing Migrations</li>
+                <li class="collapsible__item">
+                  Working with and Filtering QuerySets
+                </li>
+                <li class="collapsible__item">Class Based Views</li>
+                <li class="collapsible__item">Using Django ORM</li>
+                <li class="collapsible__item">
+                  Relational Databases (PostgreSQL)
+                </li>
+                <li class="collapsible__item">
+                  Creating Data Endpoints with JSON
+                </li>
+                <li class="collapsible__item">
+                  Working with Model Forms and Formsets
+                </li>
+              </ul>
             </label>
           </div>
           <div class="collapsible">
@@ -535,16 +557,21 @@
                 <h3 class="collapsible__heading">JavaScript</h3>
                 <span class="collapsible__icon"></span>
               </div>
-              <p class="collapsible__content">
-                — &nbsp;&nbsp; Asyncronous Programming and AJAX <br />
-                — &nbsp;&nbsp; Fetching from APIs and working with JSON <br />
-                — &nbsp;&nbsp; MVC Design <br />
-                — &nbsp;&nbsp; Object Orientated Programming in JS
-                (Prototypes)<br />
-                — &nbsp;&nbsp;DOM Manipulation <br />
-                — &nbsp;&nbsp;Event Handling <br />
-                — &nbsp;&nbsp;Responsive Design
-              </p>
+              <ul class="collapsible__content">
+                <li class="collapsible__item">
+                  Asyncronous Programming and AJAX
+                </li>
+                <li class="collapsible__item">
+                  Fetching from APIs and working with JSON
+                </li>
+                <li class="collapsible__item">MVC Design</li>
+                <li class="collapsible__item">
+                  Object Orientated Programming in JS (Prototypes)
+                </li>
+                <li class="collapsible__item">DOM Manipulation</li>
+                <li class="collapsible__item">Event Handling</li>
+                <li class="collapsible__item">Responsive Design</li>
+              </ul>
             </label>
           </div>
           <div class="collapsible">
@@ -559,16 +586,12 @@
                 <h3 class="collapsible__heading">HTML, CSS & Sass</h3>
                 <span class="collapsible__icon"></span>
               </div>
-              <p class="collapsible__content">
-                — &nbsp;&nbsp; Responsive Design (responsive units, flexbox,
-                media queries) <br />
-                — &nbsp;&nbsp; BEM Naming Convensions <br />
-                — &nbsp;&nbsp; Using semantic elements for clear markup <br />
-                — &nbsp;&nbsp; 7-1 Sass Archetecture <br />
-                — &nbsp;&nbsp; Bootstrap <br />
-                — &nbsp;&nbsp; Creating layouts with Flexbox and Grid. Also able
-                to work with float and tables in older sites.
-              </p>
+              <ul class="collapsible__content">
+                <li class="collapsible__item">Responsive Design</li>
+                <li class="collapsible__item">7-1 Sass Archetecture</li>
+                <li class="collapsible__item">Bootstrap</li>
+                <li class="collapsible__item">BEM Naming Convensions</li>
+              </ul>
             </label>
           </div>
         </div>

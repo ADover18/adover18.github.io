@@ -13,4 +13,18 @@ section {
 }
 .aboutme {
   font-weight: 300;
+  @media only screen and (min-width: 45.625em) {
+    padding-left: calc(3rem + 7vw);
+    padding-right: calc(3rem + 7vw);
+    font-size: calc(9.788px + 0.85vw);
+  }
+
+  // 16px+0.85vw-6.212)
+  // 2.1vw -> 16px
+  // 100vw/
+  // font size goes between 16 and 20 at 1200
+  // 730
+  // 16+ 1vw/3
+  // font size = 20 - 1200-100vw
 }
+// 16 the full viewport width over 730
