@@ -942,6 +942,9 @@ section {
       padding-right: calc(3rem + 7vw);
       font-size: calc(9.788px + 0.85vw); } }
 
+.projects {
+  max-height: 100vh; }
+
 .skills {
   overflow: scroll; }
   .skills__wrapper {

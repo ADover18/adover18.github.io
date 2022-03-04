@@ -50,7 +50,7 @@ const cardShowBack = (card, i) => {
   ).style.transform = `translate3d(${cardBackTranslation[i][0]}px, ${cardBackTranslation[i][1]}px, 0)`;
   console.log(getComputedStyle(card).width, getComputedStyle(card).margin);
   card.querySelector(".card__side--back").style.width = cardBackWidth;
-  card.querySelector(".card__side--back").style.height = cardBackHeight;
+  // card.querySelector(".card__side--back").style.height = cardBackHeight;
 };
 
 const cardShowFront = (card) => {
