@@ -10,23 +10,6 @@ html {
   // This defines what 1rem is
   font-size: 62.5%;
   scroll-behavior: smooth;
-  // @include respond(tab-land) {
-  //   // width < 1200?
-  //   font-size: 70%; //1 rem = 9px, 9/16 = 50%
-  // }
-
-  // @include respond(tab-port) {
-  //   // width < 900?
-  //   font-size: 80%; //1 rem = 8px, 8/16 = 50%
-  // }
-
-  // @include respond(big-desktop) {
-  //   font-size: 90%; //1rem = 12, 12/16
-  // }
-}
-
-noscript {
-  color: red;
 }
 
 body {
@@ -42,21 +25,6 @@ section {
   position: relative;
 }
 
-.pdf {
-  max-width: 80vw;
-  max-height: 80vh;
-  max-height: calc(var(--vvh, 1vh) * 80);
-  @include absolute-center;
-}
-
 fieldset {
   border-width: 0 !important;
-}
-
-.viewport {
-  position: fixed;
-  top: 10rem;
-  right: 5rem;
-  z-index: 100000000;
-  font-size: 2rem;
 }

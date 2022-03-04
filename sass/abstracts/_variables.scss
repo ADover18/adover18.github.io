@@ -1,68 +1,6 @@
-/* Colors ----------------------------------------*/
-
-$color-magenta: #f0f;
-$color-cyan: #0ff;
-$color-black-blue: #021e2b;
-$color-yellow: #ff0;
-$color-blue: #0000ff;
-$color-green: #00ff80;
-
-$color-dark-blue-1: #1c2238;
-
-$color-blue-0: #0a0e3a;
-$color-blue-1: #1b249b;
-$color-blue-2: #383fa8;
-$color-blue-3: #545bb4;
-$color-blue-4: #7176c1;
-$color-blue-5: #8d92cd;
-
-$color-purple-1: #521b9b;
-$color-purple-2: #6838a8;
-$color-purple-3: #7d54b4;
-$color-purple-4: #9371c1;
-$color-purple-5: #a98dcd;
-
-$color-pink-1: #921b9b;
-$color-pink-2: #a038a8;
-$color-pink-3: #ad54b4;
-$color-pink-4: #bb71c1;
-$color-pink-5: #c98dcd;
-
-$color-magenta-1: #9b1b64;
-$color-magenta-2: #a83877;
-$color-magenta-3: #b4548b;
-$color-magenta-4: #c1719e;
-$color-magenta-5: #cd8db2;
-
-$color-yellow-1: #ffed00;
-$color-yellow-2: #ffef20;
-$color-yellow-3: #fff240;
-$color-yellow-4: #fff460;
-$color-yellow-5: #fff680;
-$color-yellow-6: #fff89f;
-$color-yellow-7: #fffabf;
-$color-yellow-8: #fffddf;
-
-$color-mustard-1: #9b921b;
-
-$color-green-1: #1b9b52;
-$color-green-2: #38a868;
-$color-green-3: #54b47d;
-$color-green-4: #71c193;
-$color-green-5: #8dcda9;
-$color-green-6: #aadabe;
-
-$color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eee;
-
-// Big Text color, small text color, background color, accent color.
-
-// $color-grey-dark: #777;
+/* Colors-------------------------------------*/
+// See Theme Component for colour variables linked to themes
 $color-grey-dark: #707074;
-$color-grey-dark4: #666;
-
-$color-grey-dark-2: #999;
-$color-grey-dark-3: #333;
 
 $color-white: #fff;
 $color-black: #000;
@@ -70,27 +8,7 @@ $color-black: #000;
 $color-success: #5cb85c;
 $color-danger: #c32430;
 
-$color-tw-slgrey1: #f8fafc;
-$color-tw-slgrey2: #f1f5f9;
-$color-tw-slgrey3: #e2e8f0;
-$color-tw-slgrey4: #cbd5e1;
-$color-tw-slgrey5: #94a3b8;
-$color-tw-slgrey6: #64748b;
-$color-tw-slgrey7: #475569;
-$color-tw-slgrey8: #334155;
-$color-tw-slgrey9: #1e293b;
-$color-tw-slgrey10: #0f172a;
-
-$color-tw-stgrey1: #fafaf9;
-$color-tw-stgrey2: #f5f5f4;
-$color-tw-stgrey3: #e7e5e4;
-$color-tw-stgrey4: #d6d3d1;
-$color-tw-stgrey5: #a8a29e;
 $color-tw-stgrey6: #78716c;
-$color-tw-stgrey7: #57534e;
-$color-tw-stgrey8: #44403c;
-$color-tw-stgrey9: #292524;
-$color-tw-stgrey10: #1c1917;
 
 /* ------------------------------------------------*/
 
@@ -98,31 +16,8 @@ $default-font-size: 1.6rem;
 
 /* Box Shadows-------------------------------------*/
 
-$box-shadow-default: 0 1.5rem 4rem rgba($color-black, 0.15);
 $box-shadow-btn-up: 0 1rem 2rem rgba($color-black, 0.15);
 $box-shadow-btn-down: 0 0.5rem 1rem rgba($color-black, 0.15);
-$box-shadow-image-closer: 0 2.5rem 4rem rgba($color-black, 0.5);
-$box-shadow-image-further: 0 1.5rem 4rem rgba($color-black, 0.4);
-$box-shadow-image-further-small: 0 1.5rem 3rem rgba($color-black, 0.2);
-$box-shadow-wide-container: 0 3rem 6rem rgba($color-black, 0.1);
-$box-shadow-larger-light: 0 1rem 3rem rgba($color-black, 0.1);
-$box-shadow-larger-dark: 0 1.5rem 4rem rgba($color-black, 0.2);
-$box-shadow-form-input: 0 1rem 2rem rgba($color-black, 0.1);
-$box-shadow-nav-links: 0 1rem 2rem rgba($color-black, 0.4);
-
-/* Box Shadows-------------------------------------*/
-
-$box-shadow-default: 0 1.5rem 4rem rgba($color-black, 0.15);
-$box-shadow-btn-up: 0 1rem 2rem rgba($color-black, 0.15);
-$box-shadow-btn-down: 0 0.5rem 1rem rgba($color-black, 0.15);
-$box-shadow-image-closer: 0 2.5rem 4rem rgba($color-black, 0.5);
-$box-shadow-image-further: 0 1.5rem 4rem rgba($color-black, 0.4);
-$box-shadow-image-further-small: 0 1.5rem 3rem rgba($color-black, 0.2);
-$box-shadow-wide-container: 0 3rem 6rem rgba($color-black, 0.1);
-$box-shadow-larger-light: 0 1rem 3rem rgba($color-black, 0.1);
-$box-shadow-larger-dark: 0 1.5rem 4rem rgba($color-black, 0.2);
-$box-shadow-form-input: 0 1rem 2rem rgba($color-black, 0.1);
-$box-shadow-nav-links: 0 1rem 2rem rgba($color-black, 0.4);
 
 /* ------------------------------------------------*/
 

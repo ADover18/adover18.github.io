@@ -6,29 +6,3 @@
     document.documentElement.style.setProperty("--vvw", `${vw}px`);
   });
 });
-
-
-// 
-
-// wait half second, text appears and is positioned in JS
-
-
-
-
-
-// FOR TESTING PURPOSES
-// document.querySelector(
-//   ".viewport"
-// ).innerHTML = `tab-port 37.5em<br> tab-lan 56.25em <br> desktop 63em<br>
-// ${window.innerWidth}px x ${window.innerHeight}px <br> ${
-//   window.innerWidth / 16
-// }em x ${window.innerHeight / 16}em`;
-// window.addEventListener("resize", function (e) {
-//   document.querySelector(
-//     ".viewport"
-//   ).innerHTML = `tab-port 37.5em<br> tab-lan 56.25em <br> desktop 63em<br> ${
-//     window.innerWidth
-//   }px x ${window.innerHeight}px <br> ${window.innerWidth / 16}em x ${
-//     window.innerHeight / 16
-//   }em`;
-// });

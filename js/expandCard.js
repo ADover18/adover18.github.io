@@ -78,7 +78,3 @@ cardList.forEach((card, i) => {
     });
   }
 });
-
-// everythings got a color which is grey and everythings got a background colour which is white.
-// create a modifyier class which determines background color and color.
-// Apply that class to relevent parts of the webpage when selected in radio

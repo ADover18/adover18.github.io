@@ -23,6 +23,8 @@ const headingsLength = `${headings[1].getBoundingClientRect().width}px`;
 
 const scrollableContent = document.querySelector(".scroll-snap-wrapper");
 
+
+// Scrolling is prevented during animation to allow css variables to load
 const stopScroll = (e) => e.preventDefault();
 
 ["scroll", "wheel"].forEach((event) =>
@@ -35,9 +37,15 @@ setTimeout(function () {
   );
 }, 2500);
 
+
+// Dividing line's length in Hero animation set to length of the heading itself
 document
   .querySelector(".header__divider")
   .setAttribute("width", headingsLength);
+
+
+
+// CSS Varibales used in animation set (These are not currently being used as animation in implemented in JS)
 
 document.documentElement.style.setProperty(
   "--heading1-x-movement",
@@ -60,7 +68,7 @@ console.log(
   document.documentElement.style.getPropertyValue("--headings-length")
 );
 
-// BUG FIX FOR SAFARI TO ALLOW VARIABLES IN ANIMATION
+// Animation being set in Javascript to allow it to work in Safari
 
 textBlocks.forEach((textBlock, i) => {
   textBlock.animate(

@@ -42,7 +42,6 @@
     text-transform: uppercase;
     font-weight: 300;
     color: var(--color-lgtext);
-    // color: $color-grey-dark;
   }
 
   input {
@@ -64,8 +63,6 @@
     }
     &:focus {
       outline: none;
-      // box-shadow: $box-shadow-form-input;
-      // border-bottom: 3px solid $color-primary;
       &:valid {
         outline: 2px solid $color-success;
       }
@@ -85,5 +82,3 @@
     }
   }
 }
-
-//900px

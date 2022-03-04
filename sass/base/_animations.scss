@@ -158,3 +158,12 @@
     opacity: 1;
   }
 }
+
+@keyframes delayDisplay {
+  from {
+    display: none;
+  }
+  to {
+    display: block;
+  }
+}

@@ -36,18 +36,6 @@
     <title>Alex Dover | Web Developer</title>
   </head>
   <body class="theme theme__light">
-    <!-- <div class="parallax-wrapper">
-      <div class="parallax-group intro-screen" id="intro">Alex Parallax</div>
-      <div class="parallax-group" id="group-1">
-        <div class="parallax-layer base-layer">Base Layer Page</div>
-        <div class="parallax-layer mid-layer">Mid Layer Page</div>
-      </div>
-      <div class="parallax-group" id="group-2">
-        <div class="parallax-layer mid-layer">Mid Layer Page</div>
-        <div class="parallax-layer top-layer">Top Layer Page</div>
-      </div>
-      <div class="parallax-group outro-screen" id="outro">The End</div>
-    </div> -->
     <div class="navigation">
       <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 
@@ -208,65 +196,70 @@
           ></label>
         </div>
       </header>
-      <section class="aboutme" id="aboutme">
+      <section class="section section--aboutme" id="aboutme">
         <h2 class="heading-primary">About me</h2>
-        <!-- <aside class="aside aside--left">
-          -------&nbsp;&nbsp;&nbsp; ABOUT ME &nbsp;&nbsp;&nbsp;
-          ---------------------------------------------------------------------------------------------------------------------
-        </aside> -->
-        <div class="aboutme__text">
-          <p class="aboutme__paragraph small-text u-margin-bottom-xsmall">
-            My previous vocation was as a Primary School Teacher. I spent 6
-            years in the profession until 2021, and volunteered as the school IT
-            coordinator in my most recent role.
+        <div class="section--aboutme__text">
+          <p class="section--aboutme__paragraph small-text">
+            I am a ex-primary school teacher turned software developer.
           </p>
-          <p class="aboutme__paragraph small-text u-margin-bottom-xsmall">
-            In my spare time, I worked my way through the book
-            <a
-              href="https://greenteapress.com/wp/think-python/"
-              class="aboutme__link"
-              ><em>Think&nbsp;Python</em></a
-            >
-            and enjoyed the satisfaction of creating solutions to coding
-            puzzles. I set myself the challenge of creating a Django social
-            media site for sharing recipes and made a start with this project. I
-            continued to work on it over several years, eventually completing it
-            last December.
-          </p>
-          <p class="aboutme__paragraph small-text u-margin-bottom-xsmall">
+          <p class="section--aboutme__paragraph small-text">
             Last year I made the commitment to dedicate all my time to
-            retraining. I started using JavaScript after doing
+            retraining. I completed…
+          </p>
+          <ul class="section--aboutme__paragraph small-text">
+            <li>
+              <a
+                href="https://greenteapress.com/wp/think-python/"
+                class="section--aboutme__link"
+              >
+                <span class="u-bold">Think Python </span>
+                by Allen Downey</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.udemy.com/course/the-complete-javascript-course/"
+                class="section--aboutme__link"
+              >
+                <span class="u-bold"
+                  >The Complete JavaScript Course 2022:&nbsp;</span
+                >
+                From Zero to Expert by Jonas Schmettmann
+              </a>
+            </li>
+            <li>
+              <a href="https://www.udemy.com/course/advanced-css-and-sass/"
+                ><span class="u-bold">Advanced CSS and Sass:&nbsp;</span
+                >Flexbox, Grid, Animations and More by Jonas Schmettmann</a
+              >
+            </li>
+          </ul>
+
+          <p class="section--aboutme__paragraph small-text">
+            I also developed my learning through various projects, my largest
+            being Recimies, a social media site written in Django (Python) with
+            JavaScript, CSS and Bootstrap.
+          </p>
+          <p class="section--aboutme__paragraph small-text">
+            I am currently taking the time to learn React through:&nbsp;
             <a
-              href="https://www.udemy.com/course/the-complete-javascript-course/"
-              class="aboutme__link"
-              ><em>Jonas Schmettman's Udemy course</em>
-            </a>
-            . Once I’d built up my knowledge of JavaScript - along with HTML and
-            CSS - I used it to help friends and family with their websites.
-          </p>
-          <p class="aboutme__paragraph small-text u-margin-bottom-xsmall">
-            Learning JavaScript, I gained a deeper understanding of web
-            development, design patterns and object orientated programming. I
-            utilised this knowledge while completing my aforementioned social
-            media web app project.
-          </p>
-          <p class="aboutme__paragraph small-text">
-            Since Christmas, I have learnt <a
-              href="https://www.udemy.com/course/advanced-css-and-sass/"
-              ><em>Sass and Advanced CSS </em>through Udemy</a
+              href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
             >
-            and have applied my knowledge to creating this site. I am currently
-            learning React and look forward to building my first React project.
+              <span class="u-bold">React - The Complete Guide</span>
+              (incl Hooks, React Router, Redux) by Maximiliam Schwarzmüller.</a
+            >
+            I look forward to applying my learning to my next project.
+          </p>
+          <p class="section--aboutme__paragraph small-text">
+            In May I will be starting work as an Associate Consultant for
+            <a class="u-bold" href="https://www.infinityworks.com/"
+              >Infinity Works</a
+            >
+            based in Edinburgh.
           </p>
         </div>
-
-        <!-- <aside class="aside aside--right">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-------&nbsp;&nbsp;&nbsp;
-          ABOUT ME &nbsp;&nbsp;&nbsp;
-          ---------------------------------------------------------------------------------------------------------------------
-        </aside> -->
       </section>
-      <section class="projects" id="projects">
+      <section class="section section--projects" id="projects">
         <h2 class="heading-primary">Projects</h2>
         <div class="grid">
           <input
@@ -603,11 +596,7 @@
           </label>
         </div>
       </section>
-      <section class="skills" id="skills">
-        <!-- <aside class="aside aside--left">
-          -------&nbsp;&nbsp;&nbsp; Skills &nbsp;&nbsp;&nbsp;
-          ---------------------------------------------------------------------------------------------------------------------
-        </aside> -->
+      <section class="section section--skills" id="skills">
         <h2 class="heading-primary">Skills</h2>
         <div class="grid grid--accordian">
           <div class="collapsible">
@@ -701,25 +690,24 @@
             </label>
           </div>
         </div>
-
-        <!-- <aside class="aside aside--right">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-------&nbsp;&nbsp;&nbsp;
-          Skills &nbsp;&nbsp;&nbsp;
-          ---------------------------------------------------------------------------------------------------------------------
-        </aside> -->
       </section>
-      <section class="cv" id="cv">
+      <section class="section section--cv" id="cv">
         <h2 class="heading-primary">CV</h2>
-        <a class="pdf u-margin-top" rel="lightbox" href="img/CV.pdf"> </a>
+        <a
+          class="section--cv__pdf u-margin-top"
+          rel="lightbox"
+          href="img/CV.pdf"
+        >
+        </a>
         <iframe
           src="img/CV.pdf"
           frameborder="0"
           width="100%"
           height="80%"
-          class="pdf__frame"
+          class="section--cv__pdf-frame"
         ></iframe>
       </section>
-      <section class="contact" id="contact">
+      <section class="section section--contact" id="contact">
         <h2 class="heading-primary heading-primary--centered">Contact</h2>
         <form
           action="https://formspree.io/f/xjvlyara"

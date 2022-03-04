@@ -1,10 +1,4 @@
 .card {
-  // For larger screen sizes
-  // width: calc(50% - 0.5rem);
-  // height: calc(50vw - 3.5rem);
-  // max-height: 26rem;
-  // max-width: 26rem;
-  // display: inline-block;
   perspective: 150rem;
   width: 100%;
   height: 18vh;
@@ -49,14 +43,8 @@
 
   &__side {
     height: 100%;
-    @media only screen and (min-width: 49.25em) {
-      // height: 20rem;
-    }
-    // background-color: orangered;
     font-size: 2rem;
     width: 100%;
-    // height: 18vh;
-    // height: calc(var(--vvh, 1vh) * 18);
     transition: transform 0.8s ease, height 0.8s ease;
 
     position: absolute;
@@ -64,17 +52,11 @@
     left: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    // box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    //   rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    // box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    // border-radius: 3px;
-    // border: 2px solid #eee;
     overflow: hidden;
     text-align: left;
 
     &-description {
-      // flex: 1 1 auto;
       text-align: center;
       font-size: 2rem;
       display: block;
@@ -110,7 +92,6 @@
       &-Github {
         background-color: #24292f;
         color: rgb(255, 255, 233);
-        // font-family: "Zilla Slab", serif;
         font-weight: 400;
         font-size: 2.5rem;
       }
@@ -121,13 +102,11 @@
     &--back {
       background-color: var(--color-backgroundcard);
       font-size: 1.4rem;
-      // line-height: 3rem;
       padding: 1.3rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       color: var(--color-cardtext);
-      // z-index: 0;
       -webkit-font-smoothing: antialiased;
       font-smooth: always;
     }
