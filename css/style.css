@@ -589,9 +589,9 @@ h5 {
     --color-btn: #fff;
     --color-btntxt: #333333; }
   .theme__dark-pink {
-    --color-lgtext: #fcf9d7;
-    --color-smtext: #fcf9d7;
-    --color-cardtext: #fff;
+    --color-lgtext: #f7f7dc;
+    --color-smtext: #f7f7dc;
+    --color-cardtext: #333333;
     --weight-smtext: 300;
     --color-accents: #eba8bd;
     --color-background: #e27396;

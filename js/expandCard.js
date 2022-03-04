@@ -30,7 +30,7 @@ const setCardBackWidth = () => {
 };
 
 const setCardBackHeight = () => {
-  cardBackHeight = `${window.innerHeight - 141}px`;
+  cardBackHeight = `${window.innerHeight - 125}px`;
 };
 
 window.addEventListener("load", function (e) {
@@ -50,6 +50,7 @@ const cardShowBack = (card, i) => {
   ).style.transform = `translate3d(${cardBackTranslation[i][0]}px, ${cardBackTranslation[i][1]}px, 0)`;
   console.log(getComputedStyle(card).width, getComputedStyle(card).margin);
   card.querySelector(".card__side--back").style.width = cardBackWidth;
+  card.querySelector(".card__side--back").style.height = cardBackHeight;
 };
 
 const cardShowFront = (card) => {
