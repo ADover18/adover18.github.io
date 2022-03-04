@@ -7,6 +7,15 @@
   });
 });
 
+
+// 
+
+// wait half second, text appears and is positioned in JS
+
+
+
+
+
 // FOR TESTING PURPOSES
 // document.querySelector(
 //   ".viewport"

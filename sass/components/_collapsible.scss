@@ -28,12 +28,11 @@
     padding: 10px 15px;
     overflow: hidden;
     cursor: pointer;
-    background: $color-white;
     position: relative;
-    border-bottom: 3px solid $color-grey-dark;
+    border-bottom: 3px solid var(--color-accents);
+    color: var(--color-lgtext);
   }
   &__header {
-    background-color: $color-white;
     font-weight: 300;
   }
   &__icon {
@@ -43,7 +42,7 @@
     &::after {
       width: 1.7rem;
       height: 1.8px;
-      background-color: $color-grey-dark;
+      background-color: var(--color-lgtext);
       display: block;
       position: absolute;
       transition: transform 0.5s ease-in-out;
@@ -60,8 +59,8 @@
     opacity: 0;
     transform: translateY(-5rem);
     z-index: -1;
-    color: $color-grey-dark-3;
-    font-weight: 400;
+    color: var(--color-smtext);
+    font-weight: var(--weight-smtext);
     list-style-type: "—    ";
   }
   &__item {
@@ -69,7 +68,7 @@
     margin-top: 1rem;
     &::marker {
       font-weight: 700;
-      color: $color-grey-dark-3;
+      color: var(--color-smtext);
     }
   }
 }

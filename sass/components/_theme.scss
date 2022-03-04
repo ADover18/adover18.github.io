@@ -1,0 +1,124 @@
+.theme {
+  &__light {
+    --color-lgtext: #707074;
+    --color-smtext: #47474d;
+    --color-cardtext: #47474d;
+    --weight-smtext: 400;
+    --color-accents: #707074;
+    --color-background: #ffffff;
+    --color-backgroundcard: #ffffff;
+    --color-background-trans: rgba(255, 255, 255, 0.7);
+    --color-lightbackground: #ffffff;
+    --color-formborder: #d6d6d7;
+    --color-formplaceholder: #707074;
+    --color-btn: #333333;
+    --color-btntxt: #ffffff;
+  }
+  &__dark {
+    --color-lgtext: #c2c2c4;
+    --color-smtext: #ebebeb;
+    --color-cardtext: #ebebeb;
+    --weight-smtext: 300;
+    --color-accents: #47474d;
+    --color-background: #323339;
+    --color-backgroundcard: #2d2e33;
+    --color-background-trans: rgba(50, 51, 57, 0.7);
+    --color-lightbackground: #d6d6d7;
+    --color-formborder: #47474d;
+    --color-formplaceholder: #c2c2c4;
+    --color-btn: #d6d6d6;
+    --color-btntxt: #333333;
+  }
+  &__light-pink {
+    --color-lgtext: #707074;
+    --color-smtext: #707074;
+    --color-cardtext: #5b5c61;
+    --weight-smtext: 400;
+    --color-accents: #707074;
+    --color-background: #ffc0cb;
+    --color-backgroundcard: #ffd9e0;
+    --color-background-trans: rgba(255, 192, 203, 0.7);
+    --color-lightbackground: #fff;
+    --color-formborder: #99999c;
+    --color-formplaceholder: #707074;
+    --color-btn: #fff;
+    --color-btntxt: #333333;
+  }
+  &__dark-pink {
+    --color-lgtext: #fcf9d7;
+    --color-smtext: #fcf9d7;
+    --color-cardtext: #fff;
+    --weight-smtext: 300;
+    --color-accents: #eba8bd;
+    --color-background: #e27396;
+    --color-backgroundcard: #e88fab;
+    --color-background-trans: rgba(226, 115, 150, 0.7);
+    --color-lightbackground: #fff;
+    --color-formborder: #af7386;
+    --color-formplaceholder: #996877;
+    --color-btn: #fff;
+    --color-btntxt: #333333;
+  }
+  &__green {
+    --color-lgtext: #494d45;
+    --color-smtext: #494d45;
+    --color-cardtext: #494d45;
+    --weight-smtext: 400;
+    --color-accents: #494d45;
+    --color-background: #aad188;
+    --color-backgroundcard: #9dce72;
+    --color-background-trans: rgba(170, 209, 136, 0.7);
+    --color-lightbackground: #ffffff;
+    --color-formborder: #6d716a;
+    --color-formplaceholder: #57614d;
+    --color-btn: #ffffff;
+    --color-btntxt: #333333;
+  }
+  &__lilac {
+    --color-lgtext: #5b5c61;
+    --color-smtext: #5b5c61;
+    --color-cardtext: #333333;
+    --weight-smtext: 400;
+    --color-accents: #676279;
+    --color-background: #cec2ff;
+    --color-backgroundcard: #beaeff;
+    --color-background-trans: rgba(206, 194, 255, 0.7);
+    --color-lightbackground: #fff;
+    --color-formborder: #676279;
+    --color-formplaceholder: #7b768f;
+    --color-btn: #fff;
+    --color-btntxt: #333333;
+  }
+  &__yellow {
+    --color-lgtext: #494d45;
+    --color-smtext: #494d45;
+    --color-cardtext: #333333;
+    --weight-smtext: 400;
+    --color-accents: #aca65b;
+    --color-background: #f9f07a;
+    --color-backgroundcard: #f7ec59;
+    --color-background-trans: rgba(249, 240, 122, 0.7);
+    --color-lightbackground: #fff;
+    --color-formborder: #a19d65;
+    --color-formplaceholder: #a7a25d;
+    --color-btn: #fff;
+    --color-btntxt: #333333;
+  }
+  &__peach {
+    --color-lgtext: #494d45;
+    --color-smtext: #494d45;
+    --color-cardtext: #494d45;
+    --weight-smtext: 400;
+    --color-accents: #9e794e;
+    --color-background: #fcba70;
+    --color-backgroundcard: #fcba70;
+    --color-background-trans: rgba(252, 186, 112, 0.7);
+    --color-lightbackground: #fff;
+    --color-formborder: #9e794e;
+    --color-formplaceholder: #aa8356;
+    --color-btn: #fff;
+    --color-btntxt: #333333;
+  }
+  background-color: var(--color-background);
+  transition: all 0.8s ease-in-out;
+}

@@ -22,6 +22,12 @@
     align-items: center;
   }
 }
+@mixin appear-after-load {
+  & {
+    animation: fadeIn 0.5s 2s forwards;
+    opacity: 0;
+  }
+}
 
 @mixin respond($breakpoint) {
   @if $breakpoint == tab-port {

@@ -26,12 +26,10 @@
     font-size: calc(18px + 0.58vw);
     margin-bottom: 0 !important;
     font-weight: 300;
+    opacity: 0;
+    animation: fadeIn 0.6s linear forwards;
     // CSS ANIMATION NOT CURRENTLY WORKING SO IMPLEMENTED IN JS - SAFARI BUG
     &:first-child {
-      -webkit-transform: translate(
-        var(--heading1-x-movement),
-        var(--heading1-y-movement)
-      );
       transform: translate(
         var(--heading1-x-movement),
         var(--heading1-y-movement)
@@ -54,6 +52,7 @@
     }
   }
   &__text-box {
+    color: var(--color-lgtext);
     text-align: center;
     padding: 3rem;
     // max-width: 98vw;
@@ -80,6 +79,7 @@
     width: 20rem;
   }
   &__divider {
+    opacity: 0;
     animation: undrawSVGPath 2s linear forwards;
   }
 }

@@ -4,6 +4,7 @@ const headings = document.querySelectorAll(".header__heading");
 
 const header = document.querySelectorAll(".header")[0];
 console.log(header[0], header[1]);
+
 const findCenter = (el) => [
   el.getBoundingClientRect().x + el.getBoundingClientRect().width / 2,
   el.getBoundingClientRect().y + el.getBoundingClientRect().height / 2,
@@ -19,6 +20,20 @@ const movements = [...headings].map((heading, i) => [
 ]);
 
 const headingsLength = `${headings[1].getBoundingClientRect().width}px`;
+
+const scrollableContent = document.querySelector(".scroll-snap-wrapper");
+
+const stopScroll = (e) => e.preventDefault();
+
+["scroll", "wheel"].forEach((event) =>
+  scrollableContent.addEventListener(event, stopScroll)
+);
+
+setTimeout(function () {
+  ["scroll", "wheel"].forEach((event) =>
+    scrollableContent.removeEventListener(event, stopScroll)
+  );
+}, 2500);
 
 document
   .querySelector(".header__divider")
@@ -48,36 +63,17 @@ console.log(
 // BUG FIX FOR SAFARI TO ALLOW VARIABLES IN ANIMATION
 
 textBlocks.forEach((textBlock, i) => {
-  // textBlock.querySelector(".header__heading").animate(
-  //   [
-  //     {
-  //       textTransform: "uppercase",
-  //     },
-  //     // {
-  //     //   textTransform: "uppercase",
-  //     // },
-  //     { textTransform: "none" },
-  //   ],
-  //   {
-  //     // timing options
-  //     duration: 4000,
-  //     fill: "forwards",
-  //     iterations: 1,
-  //   }
-  // );
   textBlock.animate(
     [
       {
-        transform: `translate(var(--heading${i + 1}-x-movement), var(--heading${
-          i + 1
-        }-y-movement))`,
+        transform: `translate(${movements[i][0]}px, ${movements[i][1]}px)`,
+        opacity: 1,
       },
       {
-        transform: `translate(var(--heading${i + 1}-x-movement), var(--heading${
-          i + 1
-        }-y-movement))`,
+        transform: `translate(${movements[i][0]}px, ${movements[i][1]}px)`,
+        opacity: 1,
       },
-      { transform: "translate(0,0)" },
+      { transform: "translate(0,0)", opacity: 1 },
     ],
     {
       // timing options

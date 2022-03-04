@@ -3,7 +3,7 @@
     display: none;
   }
   &__button {
-    background-color: rgba($color-white, 0.7);
+    background-color: var(--color-background-trans);
     height: 4rem;
     width: 4rem;
     position: fixed;
@@ -12,7 +12,7 @@
     z-index: 2000;
     text-align: center;
     cursor: pointer;
-
+    @include appear-after-load;
     @media only screen and(min-width: 42.125em) {
       display: none;
     }
@@ -29,13 +29,15 @@
   }
 
   &__list {
+    @include appear-after-load;
     height: 100%;
     position: fixed;
     right: 0;
     width: 30rem;
     transform: translateX(30rem);
     list-style: none;
-    background-color: $color-white;
+    background-color: var(--color-background);
+    color: var(--color-lgtext);
     z-index: 1500;
     transition: all 0.8s ease-in-out;
     @media only screen and(min-width: 42.125em) {
@@ -71,17 +73,9 @@
       font-weight: 300;
       white-space: nowrap;
       padding: 1rem 2rem;
-      color: $color-grey-dark;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 5px;
-      background-image: linear-gradient(
-        120deg,
-        transparent 0%,
-        transparent 50%,
-        $color-white 50%
-      );
-      background-size: 230%;
       transition: all 0.4s;
       @media only screen and(min-width: 42.125em) {
         font-size: 1.5rem;
@@ -99,7 +93,6 @@
     }
     &:hover,
     &:active {
-      background-position: 100%;
       transform: translateX(1rem);
       @media only screen and(min-width: 42.125em) {
         transform: translateX(0);
@@ -126,7 +119,7 @@
     &::after {
       width: 3rem;
       height: 2px;
-      background-color: $color-grey-dark;
+      background-color: var(--color-lgtext);
       display: inline-block;
     }
 

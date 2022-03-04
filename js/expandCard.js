@@ -1,27 +1,55 @@
 const cardList = document.querySelectorAll(".card");
 
-const cardBack = document.querySelectorAll(".card__side--back");
+const cardBackList = document.querySelectorAll(".card__side--back");
 
-let cardPos;
+let cardBackTranslation;
+let cardBackWidth;
+let cardBackHeight;
 
-const setCardPos = () => {
-  cardPos = [...cardBack].map((card) => [
-    cardBack[0].getBoundingClientRect().x - card.getBoundingClientRect().x,
-    cardBack[0].getBoundingClientRect().y - card.getBoundingClientRect().y,
+const setCardBackTranslation = () => {
+  cardBackTranslation = [...cardBackList].map((card) => [
+    cardBackList[0].getBoundingClientRect().x -
+      card.getBoundingClientRect().x -
+      parseInt(getComputedStyle(cardList[0]).margin),
+    cardBackList[0].getBoundingClientRect().y -
+      parseInt(getComputedStyle(cardList[0]).margin) -
+      card.getBoundingClientRect().y,
   ]);
+};
+const setCardBackWidth = () => {
+  cardBackWidth =
+    window.innerWidth > 600
+      ? `${
+          2 * parseInt(getComputedStyle(cardList[0]).width) +
+          4 * parseInt(getComputedStyle(cardList[0]).margin)
+        }px`
+      : `${
+          parseInt(getComputedStyle(cardList[0]).width) +
+          2 * parseInt(getComputedStyle(cardList[0]).margin)
+        }px`;
+};
+
+const setCardBackHeight = () => {
+  cardBackHeight = `${window.innerHeight - 141}px`;
 };
 
 window.addEventListener("load", function (e) {
-  setTimeout(setCardPos(), 10000);
+  setTimeout(setCardBackTranslation(), 10000);
+  setCardBackWidth();
+  setCardBackHeight();
 });
 window.addEventListener("resize", function (e) {
-  setCardPos();
+  setCardBackTranslation();
+  setCardBackWidth();
+  setCardBackHeight();
 });
 
 const cardShowBack = (card, i) => {
   card.querySelector(
     ".card__side--back"
-  ).style.transform = `translate3d(${cardPos[i][0]}px, ${cardPos[i][1]}px, 0)`;
+  ).style.transform = `translate3d(${cardBackTranslation[i][0]}px, ${cardBackTranslation[i][1]}px, 0)`;
+  console.log(getComputedStyle(card).width, getComputedStyle(card).margin);
+  card.querySelector(".card__side--back").style.width = cardBackWidth;
 };
 
 const cardShowFront = (card) => {
@@ -49,3 +77,7 @@ cardList.forEach((card, i) => {
     });
   }
 });
+
+// everythings got a color which is grey and everythings got a background colour which is white.
+// create a modifyier class which determines background color and color.
+// Apply that class to relevent parts of the webpage when selected in radio

@@ -25,9 +25,12 @@ html {
   // }
 }
 
+noscript {
+  color: red;
+}
+
 body {
   box-sizing: border-box;
-  // background-color: rgba(250, 204, 21, 0.5);
 }
 
 a {

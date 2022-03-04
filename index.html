@@ -31,9 +31,11 @@
     <script type="module" defer src="js/expandCard.js"></script>
     <script type="module" defer src="js/animateHero.js"></script>
     <script type="module" defer src="js/navigation.js"></script>
+    <script type="module" defer src="js/selectTheme.js"></script>
+
     <title>Alex Dover | Web Developer</title>
   </head>
-  <body>
+  <body class="theme theme__light">
     <!-- <div class="parallax-wrapper">
       <div class="parallax-group intro-screen" id="intro">Alex Parallax</div>
       <div class="parallax-group" id="group-1">
@@ -46,7 +48,6 @@
       </div>
       <div class="parallax-group outro-screen" id="outro">The End</div>
     </div> -->
-    <div class="viewport"></div>
     <div class="navigation">
       <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
 
@@ -115,6 +116,97 @@
             <span class="header__info">based in Edinburgh.</span>
           </p>
         </div>
+        <div class="theme-selection">
+          <input
+            type="radio"
+            class="theme-selection__selector"
+            name="theme-selection"
+            id="color-light"
+            checked
+          />
+          <label
+            for="color-light"
+            class="theme-selection__label theme-selection__label--light"
+            ><div class="theme-selection__radio-inner"></div
+          ></label>
+          <input
+            type="radio"
+            class="theme-selection__selector"
+            name="theme-selection"
+            id="color-dark"
+          />
+          <label
+            for="color-dark"
+            class="theme-selection__label theme-selection__label--dark"
+            ><div class="theme-selection__radio-inner"></div
+          ></label>
+          <input
+            type="radio"
+            class="theme-selection__selector"
+            name="theme-selection"
+            id="color-light-pink"
+          />
+          <label
+            for="color-light-pink"
+            class="theme-selection__label theme-selection__label--light-pink"
+            ><div class="theme-selection__radio-inner"></div
+          ></label>
+          <input
+            type="radio"
+            class="theme-selection__selector"
+            name="theme-selection"
+            id="color-dark-pink"
+          />
+          <label
+            for="color-dark-pink"
+            class="theme-selection__label theme-selection__label--dark-pink"
+            ><div class="theme-selection__radio-inner"></div
+          ></label>
+          <input
+            type="radio"
+            class="theme-selection__selector"
+            name="theme-selection"
+            id="color-green"
+          />
+          <label
+            for="color-green"
+            class="theme-selection__label theme-selection__label--green"
+            ><div class="theme-selection__radio-inner"></div
+          ></label>
+          <input
+            type="radio"
+            class="theme-selection__selector"
+            name="theme-selection"
+            id="color-lilac"
+          />
+          <label
+            for="color-lilac"
+            class="theme-selection__label theme-selection__label--lilac"
+            ><div class="theme-selection__radio-inner"></div
+          ></label>
+          <input
+            type="radio"
+            class="theme-selection__selector"
+            name="theme-selection"
+            id="color-yellow"
+          />
+          <label
+            for="color-yellow"
+            class="theme-selection__label theme-selection__label--yellow"
+            ><div class="theme-selection__radio-inner"></div
+          ></label>
+          <input
+            type="radio"
+            class="theme-selection__selector"
+            name="theme-selection"
+            id="color-peach"
+          />
+          <label
+            for="color-peach"
+            class="theme-selection__label theme-selection__label--peach"
+            ><div class="theme-selection__radio-inner"></div
+          ></label>
+        </div>
       </header>
       <section class="aboutme" id="aboutme">
         <h2 class="heading-primary">About me</h2>
@@ -122,48 +214,52 @@
           -------&nbsp;&nbsp;&nbsp; ABOUT ME &nbsp;&nbsp;&nbsp;
           ---------------------------------------------------------------------------------------------------------------------
         </aside> -->
-        <p class="aboutme__text u-margin-bottom-xsmall">
-          My previous vocation was as a Primary School Teacher. I spent 6 years
-          in the profession until 2021, and volunteered as the school IT
-          coordinator in my most recent role.
-        </p>
-        <p class="aboutme__text u-margin-bottom-xsmall">
-          In my spare time, I worked my way through the book
-          <a
-            href="https://greenteapress.com/wp/think-python/"
-            class="aboutme__link"
-            ><em>Think&nbsp;Python</em></a
-          >
-          and enjoyed the satisfaction of creating solutions to coding puzzles.
-          I set myself the challenge of creating a Django social media site for
-          sharing recipes and made a start with this project. I continued to
-          work on it over several years, eventually completing it last December.
-        </p>
-        <p class="aboutme__text u-margin-bottom-xsmall">
-          Last year I made the commitment to dedicate all my time to retraining.
-          I started using JavaScript after doing
-          <a
-            href="https://www.udemy.com/course/the-complete-javascript-course/"
-            class="aboutme__link"
-            ><em>Jonas Schmettman's Udemy course</em>
-          </a>
-          . Once I’d built up my knowledge of JavaScript - along with HTML and
-          CSS - I used it to help friends and family with their websites.
-        </p>
-        <p class="aboutme__text">
-          Learning JavaScript, I gained a deeper understanding of web
-          development, design patterns and object orientated programming. I
-          utilised this knowledge while completing my aforementioned social
-          media web app project.
-        </p>
-        <p class="aboutme__text">
-          Since Christmas, I have learnt <a
-            href="https://www.udemy.com/course/advanced-css-and-sass/"
-            ><em>Sass and Advanced CSS </em>through Udemy</a
-          >
-          and have applied my knowledge to creating this site. I am currently
-          learning React and look forward to building my first React project.
-        </p>
+        <div class="aboutme__text">
+          <p class="aboutme__paragraph small-text u-margin-bottom-xsmall">
+            My previous vocation was as a Primary School Teacher. I spent 6
+            years in the profession until 2021, and volunteered as the school IT
+            coordinator in my most recent role.
+          </p>
+          <p class="aboutme__paragraph small-text u-margin-bottom-xsmall">
+            In my spare time, I worked my way through the book
+            <a
+              href="https://greenteapress.com/wp/think-python/"
+              class="aboutme__link"
+              ><em>Think&nbsp;Python</em></a
+            >
+            and enjoyed the satisfaction of creating solutions to coding
+            puzzles. I set myself the challenge of creating a Django social
+            media site for sharing recipes and made a start with this project. I
+            continued to work on it over several years, eventually completing it
+            last December.
+          </p>
+          <p class="aboutme__paragraph small-text u-margin-bottom-xsmall">
+            Last year I made the commitment to dedicate all my time to
+            retraining. I started using JavaScript after doing
+            <a
+              href="https://www.udemy.com/course/the-complete-javascript-course/"
+              class="aboutme__link"
+              ><em>Jonas Schmettman's Udemy course</em>
+            </a>
+            . Once I’d built up my knowledge of JavaScript - along with HTML and
+            CSS - I used it to help friends and family with their websites.
+          </p>
+          <p class="aboutme__paragraph small-text u-margin-bottom-xsmall">
+            Learning JavaScript, I gained a deeper understanding of web
+            development, design patterns and object orientated programming. I
+            utilised this knowledge while completing my aforementioned social
+            media web app project.
+          </p>
+          <p class="aboutme__paragraph small-text">
+            Since Christmas, I have learnt <a
+              href="https://www.udemy.com/course/advanced-css-and-sass/"
+              ><em>Sass and Advanced CSS </em>through Udemy</a
+            >
+            and have applied my knowledge to creating this site. I am currently
+            learning React and look forward to building my first React project.
+          </p>
+        </div>
+
         <!-- <aside class="aside aside--right">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-------&nbsp;&nbsp;&nbsp;
           ABOUT ME &nbsp;&nbsp;&nbsp;
@@ -367,14 +463,16 @@
                 class="card__side-description card__side-description--xsmall"
                 >Social media website for uploading and sharing recipes.</span
               >
-              <span
+              <span class="card__side-info"
                 >Large full stack project created in Django; data stored using
                 PostgresSQL. I used JavaScript to implement the front-end
                 functionality and a combination of Bootstrap and custom CSS for
                 the styling.</span
               >
 
-              <a href="https://github.com/ADover18/recimies" class="btn"
+              <a
+                href="https://github.com/ADover18/recimies"
+                class="card__btn btn"
                 >View on Github</a
               >
             </div>
@@ -404,7 +502,7 @@
               <span class="card__side-description"
                 >Portfolio Website for Artist, Catherine Stevenson</span
               >
-              <span
+              <span class="card__side-info"
                 >This project was created using HTML, CSS and JavaScript. I
                 contributed to the project by writing JavaScript to implement
                 lazy loading of the artworks. I have also updated the website
@@ -443,7 +541,7 @@
               <span class="card__side-description"
                 >Portfolio Website for Poet, Sam Glover</span
               >
-              <span
+              <span class="card__side-info"
                 >This project was created using HTML and CSS. The writer
                 requested that font sizes were responsive to the viewport to
                 minimise improper line breaks in the poetry. I implemented this
@@ -525,21 +623,25 @@
                 <span class="collapsible__icon"></span>
               </div>
               <ul class="collapsible__content">
-                <li class="collapsible__item">Object Orientated Programming</li>
-                <li class="collapsible__item">MVP Design</li>
-                <li class="collapsible__item">Managing Migrations</li>
-                <li class="collapsible__item">
+                <li class="collapsible__item small-text">
+                  Object Orientated Programming
+                </li>
+                <li class="collapsible__item small-text">MVP Design</li>
+                <li class="collapsible__item small-text">
+                  Managing Migrations
+                </li>
+                <li class="collapsible__item small-text">
                   Working with and Filtering QuerySets
                 </li>
-                <li class="collapsible__item">Class Based Views</li>
-                <li class="collapsible__item">Using Django ORM</li>
-                <li class="collapsible__item">
+                <li class="collapsible__item small-text">Class Based Views</li>
+                <li class="collapsible__item small-text">Using Django ORM</li>
+                <li class="collapsible__item small-text">
                   Relational Databases (PostgreSQL)
                 </li>
-                <li class="collapsible__item">
+                <li class="collapsible__item small-text">
                   Creating Data Endpoints with JSON
                 </li>
-                <li class="collapsible__item">
+                <li class="collapsible__item small-text">
                   Working with Model Forms and Formsets
                 </li>
               </ul>
@@ -558,19 +660,19 @@
                 <span class="collapsible__icon"></span>
               </div>
               <ul class="collapsible__content">
-                <li class="collapsible__item">
+                <li class="collapsible__item small-text">
                   Asyncronous Programming and AJAX
                 </li>
-                <li class="collapsible__item">
+                <li class="collapsible__item small-text">
                   Fetching from APIs and working with JSON
                 </li>
-                <li class="collapsible__item">MVC Design</li>
-                <li class="collapsible__item">
+                <li class="collapsible__item small-text">MVC Design</li>
+                <li class="collapsible__item small-text">
                   Object Orientated Programming in JS (Prototypes)
                 </li>
-                <li class="collapsible__item">DOM Manipulation</li>
-                <li class="collapsible__item">Event Handling</li>
-                <li class="collapsible__item">Responsive Design</li>
+                <li class="collapsible__item small-text">DOM Manipulation</li>
+                <li class="collapsible__item small-text">Event Handling</li>
+                <li class="collapsible__item small-text">Responsive Design</li>
               </ul>
             </label>
           </div>
@@ -587,10 +689,14 @@
                 <span class="collapsible__icon"></span>
               </div>
               <ul class="collapsible__content">
-                <li class="collapsible__item">Responsive Design</li>
-                <li class="collapsible__item">7-1 Sass Archetecture</li>
-                <li class="collapsible__item">Bootstrap</li>
-                <li class="collapsible__item">BEM Naming Convensions</li>
+                <li class="collapsible__item small-text">Responsive Design</li>
+                <li class="collapsible__item small-text">
+                  7-1 Sass Archetecture
+                </li>
+                <li class="collapsible__item small-text">Bootstrap</li>
+                <li class="collapsible__item small-text">
+                  BEM Naming Convensions
+                </li>
               </ul>
             </label>
           </div>
@@ -620,56 +726,61 @@
           method="POST"
           class="form"
         >
-          <fieldset id="fs-frm-inputs" class="form__formset">
-            <div class="form__group">
-              <label class="form__label" for="full-name">* Full Name</label>
-              <input
-                class="form__input"
-                type="text"
-                name="name"
-                id="full-name"
-                placeholder="First and Last"
-                required=""
-                pattern="^\S+\s\S+$"
-                oninvalid="this.setCustomValidity('Please enter and first name and last name.')"
-              />
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="email-address"
-                >* Email Address</label
-              >
-              <input
-                class="form__input"
-                type="email"
-                name="_replyto"
-                id="email-address"
-                placeholder="email@domain.tld"
-                required=""
-              />
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="subject"
-                >&nbsp;&nbsp;Subject</label
-              >
-              <input
-                name="subject"
-                class="form__input"
-                id="subject"
-                placeholder="Email Subject"
-              />
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="message">* Message</label>
-              <textarea
-                class="form__input"
-                rows="5"
-                name="message"
-                id="message"
-                placeholder="Enter your message..."
-                required=""
-              ></textarea>
-            </div>
-          </fieldset>
+          <div class="form__fieldset-wrapper">
+            <fieldset id="fs-frm-inputs1" class="form__formset">
+              <div class="form__group">
+                <label class="form__label" for="full-name">* Full Name</label>
+                <input
+                  class="form__input"
+                  type="text"
+                  name="name"
+                  id="full-name"
+                  placeholder="First and Last"
+                  required=""
+                  pattern="^\S+\s\S+$"
+                  oninvalid="this.setCustomValidity('Please enter and first name and last name.')"
+                />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="email-address"
+                  >* Email Address</label
+                >
+                <input
+                  class="form__input"
+                  type="email"
+                  name="_replyto"
+                  id="email-address"
+                  placeholder="email@domain.tld"
+                  required=""
+                />
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="subject"
+                  >&nbsp;&nbsp;Subject</label
+                >
+                <input
+                  name="subject"
+                  class="form__input"
+                  id="subject"
+                  placeholder="Email Subject"
+                />
+              </div>
+            </fieldset>
+            <fieldset id="fs-frm-inputs2" class="form__formset">
+              <div class="form__group">
+                <label class="form__label" for="message">* Message</label>
+                <textarea
+                  class="form__input form__input--textarea"
+                  rows="5"
+                  name="message"
+                  id="message"
+                  placeholder="Enter your message..."
+                  required=""
+                ></textarea>
+              </div>
+            </fieldset>
+          </div>
+
           <input class="btn form__btn" type="submit" value="Submit" />
         </form>
       </section>

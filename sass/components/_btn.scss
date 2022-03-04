@@ -12,8 +12,8 @@
     font-size: 1.2rem;
     box-shadow: $box-shadow-btn-down;
     text-align: center;
-    background-color: $color-grey-dark-3;
-    color: $color-white;
+    background-color: var(--color-btn);
+    color: var(--color-btntxt);
     width: 21rem;
     margin-left: auto;
     margin-right: auto;
