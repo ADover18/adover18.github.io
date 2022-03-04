@@ -943,7 +943,8 @@ section {
       font-size: calc(9.788px + 0.85vw); } }
 
 .projects {
-  max-height: 100vh; }
+  max-height: 100vh;
+  overflow: hidden; }
 
 .skills {
   overflow: scroll; }
