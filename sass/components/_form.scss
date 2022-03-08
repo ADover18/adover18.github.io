@@ -14,12 +14,23 @@
   @media only screen and (min-width: 56.25em) {
     &__formset {
       &:first-child {
-        margin-right: 4rem;
+        margin-right: 2rem;
         width: 35rem;
       }
       &:last-child {
-        margin-left: 4rem;
+        margin-left: 2rem;
         width: 45rem;
+      }
+    }
+  }
+  @media only screen and (min-width: 65em) {
+    &__formset {
+      &:first-child {
+        margin-right: 4rem;
+      }
+      &:last-child {
+        margin-left: 4rem;
+        width: calc(100vw - 53rem);
       }
     }
   }
@@ -75,7 +86,7 @@
     }
     @media only screen and (min-width: 56.25em) {
       &--textarea {
-        height: 30rem;
+        height: calc(var(--vvh, 1vh) * 100 - 30rem);
         width: 100%;
         margin-bottom: 6rem;
       }

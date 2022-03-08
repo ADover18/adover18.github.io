@@ -13,11 +13,13 @@ const styleActiveNavLink = function (entries, observer) {
     let targSectIndex = [...sections].indexOf(entry.target);
     if (!entry.isIntersecting) {
       navLinks[targSectIndex].style.fontWeight = "300";
+
       navLinks[targSectIndex].style.fontSize = "15px";
       return;
     }
     navLinks[targSectIndex].style.fontWeight = "500";
-    navLinks[targSectIndex].style.fontSize = "25px";
+    navLinks[targSectIndex].style.fontSize =
+      window.innerWidth > 950 ? "32px" : "25px";
   });
 };
 

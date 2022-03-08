@@ -418,11 +418,17 @@ h5 {
     width: 80vw; }
   @media only screen and (min-width: 56.25em) {
     .form__formset:first-child {
-      margin-right: 4rem;
+      margin-right: 2rem;
       width: 35rem; }
     .form__formset:last-child {
-      margin-left: 4rem;
+      margin-left: 2rem;
       width: 45rem; } }
+  @media only screen and (min-width: 65em) {
+    .form__formset:first-child {
+      margin-right: 4rem; }
+    .form__formset:last-child {
+      margin-left: 4rem;
+      width: calc(100vw - 53rem); } }
   .form__group {
     display: flex;
     flex-direction: column; }
@@ -461,7 +467,7 @@ h5 {
       color: var(--color-formplaceholder); }
     @media only screen and (min-width: 56.25em) {
       .form__input--textarea {
-        height: 30rem;
+        height: calc(var(--vvh, 1vh) * 100 - 30rem);
         width: 100%;
         margin-bottom: 6rem; } }
 
@@ -611,6 +617,7 @@ h5 {
   .theme-selection__selector:checked + .theme-selection__label {
     cursor: auto; }
   .theme-selection__label {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 4px;
     border-radius: 50%;
     background-color: var(--color-background);
     cursor: pointer;
@@ -714,7 +721,8 @@ h5 {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 5px;
-  transition: all 0.4s; }
+  transition: all 0.4s;
+  transition: font-size 0.6s; }
   @media only screen and (min-width: 42.125em) {
     .navigation__link:link, .navigation__link:visited {
       font-size: 1.5rem; } }
