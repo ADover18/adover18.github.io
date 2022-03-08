@@ -525,18 +525,18 @@ h5 {
     --color-formplaceholder: #707074;
     --color-btn: #fff;
     --color-btntxt: #333333; }
-  .theme__dark-pink {
-    --color-lgtext: #f7f7dc;
-    --color-smtext: #f7f7dc;
-    --color-cardtext: #333333;
+  .theme__blue {
+    --color-lgtext: #5b5c61;
+    --color-smtext: #5b5c61;
+    --color-cardtext: #5b5c61;
     --weight-smtext: 300;
-    --color-accents: #eba8bd;
-    --color-background: #e27396;
-    --color-backgroundcard: #e88fab;
-    --color-background-trans: rgba(226, 115, 150, 0.7);
+    --color-accents: #8793a5;
+    --color-background: #cbdcf5;
+    --color-backgroundcard: #e0eaf9;
+    --color-background-trans: rgba(203, 220, 245, 0.7);
     --color-lightbackground: #fff;
-    --color-formborder: #af7386;
-    --color-formplaceholder: #996877;
+    --color-formborder: #8793a5;
+    --color-formplaceholder: #8793a5;
     --color-btn: #fff;
     --color-btntxt: #333333; }
   .theme__green {
@@ -628,8 +628,8 @@ h5 {
       background-color: #323339; }
     .theme-selection__label--light-pink {
       background-color: #ffc0cb; }
-    .theme-selection__label--dark-pink {
-      background-color: #e27396; }
+    .theme-selection__label--blue {
+      background-color: #cbdcf5; }
     .theme-selection__label--green {
       background-color: #aad188; }
     .theme-selection__label--lilac {

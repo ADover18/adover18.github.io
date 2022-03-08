@@ -1,7 +1,7 @@
 const lightRadioBtn = document.querySelector("#color-light");
 const darkRadioBtn = document.querySelector("#color-dark");
 const lightPinkRadioBtn = document.querySelector("#color-light-pink");
-const darkPinkRadioBtn = document.querySelector("#color-dark-pink");
+const blueRadioBtn = document.querySelector("#color-blue");
 const greenRadioBtn = document.querySelector("#color-green");
 const lilacRadioBtn = document.querySelector("#color-lilac");
 const yellowRadioBtn = document.querySelector("#color-yellow");
@@ -11,7 +11,7 @@ const body = document.querySelector("body");
 lightRadioBtn.addEventListener("change", function () {
   body.classList.add("theme__light");
   body.classList.remove("theme__dark");
-  body.classList.remove("theme__dark-pink");
+  body.classList.remove("theme__blue");
   body.classList.remove("theme__light-pink");
   body.classList.remove("theme__green");
   body.classList.remove("theme__lilac");
@@ -22,7 +22,7 @@ lightRadioBtn.addEventListener("change", function () {
 darkRadioBtn.addEventListener("change", function () {
   body.classList.add("theme__dark");
   body.classList.remove("theme__light");
-  body.classList.remove("theme__dark-pink");
+  body.classList.remove("theme__blue");
   body.classList.remove("theme__light-pink");
   body.classList.remove("theme__green");
   body.classList.remove("theme__lilac");
@@ -36,13 +36,13 @@ lightPinkRadioBtn.addEventListener("change", function () {
   body.classList.remove("theme__dark");
   body.classList.remove("theme__green");
   body.classList.remove("theme__lilac");
-  body.classList.remove("theme__dark-pink");
+  body.classList.remove("theme__blue");
   body.classList.remove("theme__yellow");
   body.classList.remove("theme__peach");
 });
 
-darkPinkRadioBtn.addEventListener("change", function () {
-  body.classList.add("theme__dark-pink");
+blueRadioBtn.addEventListener("change", function () {
+  body.classList.add("theme__blue");
   body.classList.remove("theme__light");
   body.classList.remove("theme__dark");
   body.classList.remove("theme__green");
@@ -55,7 +55,7 @@ darkPinkRadioBtn.addEventListener("change", function () {
 greenRadioBtn.addEventListener("change", function () {
   body.classList.add("theme__green");
   body.classList.remove("theme__light");
-  body.classList.remove("theme__dark-pink");
+  body.classList.remove("theme__blue");
   body.classList.remove("theme__light-pink");
   body.classList.remove("theme__dark");
   body.classList.remove("theme__lilac");
@@ -66,7 +66,7 @@ lilacRadioBtn.addEventListener("change", function () {
   body.classList.add("theme__lilac");
   body.classList.remove("theme__green");
   body.classList.remove("theme__light");
-  body.classList.remove("theme__dark-pink");
+  body.classList.remove("theme__blue");
   body.classList.remove("theme__light-pink");
   body.classList.remove("theme__dark");
   body.classList.remove("theme__yellow");
@@ -77,7 +77,7 @@ yellowRadioBtn.addEventListener("change", function () {
   body.classList.remove("theme__lilac");
   body.classList.remove("theme__green");
   body.classList.remove("theme__light");
-  body.classList.remove("theme__dark-pink");
+  body.classList.remove("theme__blue");
   body.classList.remove("theme__light-pink");
   body.classList.remove("theme__dark");
   body.classList.remove("theme__peach");
@@ -86,7 +86,7 @@ peachRadioBtn.addEventListener("change", function () {
   body.classList.add("theme__peach");
   body.classList.remove("theme__light");
   body.classList.remove("theme__dark");
-  body.classList.remove("theme__dark-pink");
+  body.classList.remove("theme__blue");
   body.classList.remove("theme__light-pink");
   body.classList.remove("theme__green");
   body.classList.remove("theme__lilac");
