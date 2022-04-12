@@ -1,3 +1,13 @@
+const headerText = document.querySelector(".header__text-box");
+window.onload = function () {
+  if (!window.location.hash) {
+    window.location = window.location + "#loaded";
+    window.location.reload();
+  } else {
+    headerText.style.opacity = "1";
+  }
+};
+
 const textBlocks = document.querySelectorAll(".header__text");
 
 const headings = document.querySelectorAll(".header__heading");
@@ -23,7 +33,6 @@ const headingsLength = `${headings[1].getBoundingClientRect().width}px`;
 
 const scrollableContent = document.querySelector(".scroll-snap-wrapper");
 
-
 // Scrolling is prevented during animation to allow css variables to load
 const stopScroll = (e) => e.preventDefault();
 
@@ -37,13 +46,10 @@ setTimeout(function () {
   );
 }, 2500);
 
-
 // Dividing line's length in Hero animation set to length of the heading itself
 document
   .querySelector(".header__divider")
   .setAttribute("width", headingsLength);
-
-
 
 // CSS Varibales used in animation set (These are not currently being used as animation in implemented in JS)
 
