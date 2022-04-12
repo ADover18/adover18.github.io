@@ -838,12 +838,10 @@ h5 {
       font-size: calc(40px + 3vw);
       font-weight: 300; } }
   .header__text-box {
-    opacity: 0;
     color: var(--color-lgtext);
     text-align: center;
     padding: 3rem;
-    max-width: 33.1rem;
-    transition: opacity 0.5s; }
+    max-width: 33.1rem; }
     .header__text-box {
       position: absolute;
       top: 50%;

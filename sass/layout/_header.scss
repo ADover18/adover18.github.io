@@ -52,14 +52,12 @@
     }
   }
   &__text-box {
-    opacity: 0;
     color: var(--color-lgtext);
     text-align: center;
     padding: 3rem;
     // max-width: 98vw;
     max-width: 33.1rem;
     // width: calc(292px + 22.33vw + 11rem);
-    transition: opacity 0.5s;
     @include absolute-center;
     @media only screen and (min-width: 23.75em) {
       max-width: 39.9rem;
