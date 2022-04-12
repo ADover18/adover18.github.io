@@ -29,18 +29,6 @@
     opacity: 0;
     animation: fadeIn 0.6s linear forwards;
     // CSS ANIMATION NOT CURRENTLY WORKING SO IMPLEMENTED IN JS - SAFARI BUG
-    // &:first-child {
-    //   transform: translate(
-    //     var(--heading1-x-movement),
-    //     var(--heading1-y-movement)
-    //   );
-    // }
-    // &:last-child {
-    //   transform: translate(
-    //     var(--heading2-x-movement),
-    //     var(--heading2-y-movement)
-    //   );
-    // }
   }
   &__info {
     animation: fadeIn 4s linear forwards;

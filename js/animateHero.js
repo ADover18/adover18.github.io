@@ -43,22 +43,23 @@ document
 
 // CSS Varibales used in animation set (These are not currently being used as animation in implemented in JS)
 
-document.documentElement.style.setProperty(
-  "--heading1-x-movement",
-  `${movements[0][0]}px`
-);
-document.documentElement.style.setProperty(
-  "--heading1-y-movement",
-  `${movements[0][1]}px`
-);
-document.documentElement.style.setProperty(
-  "--heading2-x-movement",
-  `${movements[1][0]}px`
-);
-document.documentElement.style.setProperty(
-  "--heading2-y-movement",
-  `${movements[1][1]}px`
-);
+// document.documentElement.style.setProperty(
+//   "--heading1-x-movement",
+//   `${movements[0][0]}px`
+// );
+// document.documentElement.style.setProperty(
+//   "--heading1-y-movement",
+//   `${movements[0][1]}px`
+// );
+// document.documentElement.style.setProperty(
+//   "--heading2-x-movement",
+//   `${movements[1][0]}px`
+// );
+// document.documentElement.style.setProperty(
+//   "--heading2-y-movement",
+//   `${movements[1][1]}px`
+// );
+
 document.documentElement.style.setProperty("--headings-length", headingsLength);
 console.log(
   document.documentElement.style.getPropertyValue("--headings-length")
