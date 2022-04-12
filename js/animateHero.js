@@ -64,6 +64,9 @@ console.log(
   document.documentElement.style.getPropertyValue("--headings-length")
 );
 
+textBlocks[0].style.transform = `translate ${movements[0][0]}px, ${movements[0][1]}px`;
+
+textBlocks[1].style.transform = `translate ${movements[1][0]}px, ${movements[1][1]}px`;
 // Animation being set in Javascript to allow it to work in Safari
 
 textBlocks.forEach((textBlock, i) => {

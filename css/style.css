@@ -827,10 +827,6 @@ h5 {
     font-weight: 300;
     opacity: 0;
     animation: fadeIn 0.6s linear forwards; }
-    .header__text:first-child {
-      transform: translate(var(--heading1-x-movement), var(--heading1-y-movement)); }
-    .header__text:last-child {
-      transform: translate(var(--heading2-x-movement), var(--heading2-y-movement)); }
   .header__info {
     animation: fadeIn 4s linear forwards; }
   @media only screen and (min-width: 28em) {
