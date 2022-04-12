@@ -1,13 +1,3 @@
-const headerText = document.querySelector(".header__text-box");
-window.onload = function () {
-  if (!window.location.hash) {
-    window.location = window.location + "#loaded";
-    window.location.reload();
-  } else {
-    headerText.style.opacity = "1";
-  }
-};
-
 const textBlocks = document.querySelectorAll(".header__text");
 
 const headings = document.querySelectorAll(".header__heading");
