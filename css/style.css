@@ -304,6 +304,10 @@ h5 {
       transition-delay: 0s; }
     .card:hover .card__side--front {
       transform: rotateY(-180deg); }
+    .card:hover video {
+      display: block; }
+    .card:not(:hover) video {
+      display: none; }
     .card:hover .card__side--back {
       transform: rotateY(0);
       height: calc(72vh + 3.6rem);
@@ -332,6 +336,8 @@ h5 {
     .flipcard-checkbox:checked + .card {
       z-index: 555555 !important;
       transition-delay: 0s; }
+      .flipcard-checkbox:checked + .card video {
+        display: block; }
     .flipcard-checkbox:checked + .card .card__side--front {
       transform: rotateY(-180deg); }
     .flipcard-checkbox:checked + .card .card__side--back {
@@ -340,7 +346,9 @@ h5 {
       height: calc(var(--vvh, 1vh) * 72 + 3.6rem);
       width: 80vw; }
     .flipcard-checkbox:not(:checked) + .card .card__side--back {
-      transform: translate3d(0, 0, 0) rotateY(180deg); } }
+      transform: translate3d(0, 0, 0) rotateY(180deg); }
+      .flipcard-checkbox:not(:checked) + .card .card__side--back video {
+        display: none; } }
 
 .collapsible {
   width: 100%;
@@ -348,7 +356,8 @@ h5 {
   @media only screen and (min-width: 63em) {
     .collapsible {
       width: calc(((100vw - 15rem) / 3));
-      margin: 0 1.5rem; } }
+      margin: 0 1.5rem;
+      max-width: calc(33.3% - 3rem); } }
   .collapsible__checkbox {
     display: none; }
   .collapsible__checkbox:checked ~ .collapsible__section {
@@ -790,8 +799,15 @@ h5 {
   flex-wrap: wrap;
   width: 100%;
   justify-content: center; }
+  .grid--cards {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto; }
   .grid--accordian {
-    justify-content: left; }
+    justify-content: left;
+    max-width: 2000px;
+    margin-left: auto;
+    margin-right: auto; }
 
 .header {
   top: 0;

@@ -4,6 +4,7 @@
   @media only screen and (min-width: 63em) {
     width: calc(((100vw - 15rem) / 3));
     margin: 0 1.5rem;
+    max-width: calc(33.3% - 3rem);
   }
   &__checkbox {
     display: none;
